@@ -1,0 +1,13 @@
+{
+  "name": "@hnxml/hnxml",
+  "exports": "./index.ts",
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "jsx-xml"
+  }
+}

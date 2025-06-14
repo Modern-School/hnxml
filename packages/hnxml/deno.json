@@ -2,7 +2,8 @@
   "name": "@hnxml/hnxml",
   "exports": {
     ".": "./index.ts",
-    "./init/mission": "./src/components/mission/declare.ts"
+    "./init/mission": "./src/components/mission/declare.ts",
+    "./init/action": "./src/components/action/declare.ts"
   },
   "compilerOptions": {
     "lib": [

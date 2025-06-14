@@ -1,6 +1,9 @@
 {
   "name": "@hnxml/hnxml",
-  "exports": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./init/mission": "./src/components/mission/declare.ts"
+  },
   "compilerOptions": {
     "lib": [
       "esnext",

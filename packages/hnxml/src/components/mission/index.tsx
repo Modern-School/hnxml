@@ -1,38 +1,41 @@
-import { HXGoal, HXGoals } from "./goals.ts";
+import type { HXGoal, HXGoals } from "./goals.ts";
 import { render } from "jsx-xml";
+import type { HXMissionEmail } from "./email.ts";
 
-export interface HXEmail {
-  sender: string;
-  subject: string;
-  body: string;
-  attachments: void;
-  children?: never;
+export namespace Mission {
+  export interface start {
+    val: string;
+    suppress: "true" | "false";
+    children: string;
+  }
+  export interface end {
+    val: string;
+    children: string;
+  }
+  export interface next {
+    IsSilent: "true" | "false";
+    children: string;
+  }
+  export interface branchs {
+    children: void | branch | branch[];
+  }
+  export interface branch {
+    children: string;
+  }
 }
 
-interface Note {
-  title: string;
-}
+type MissionChildren =
+  | void
+  | HXGoals
+  | HXMissionEmail
+  | Mission.start
+  | Mission.end
+  | Mission.next
+  | Mission.branchs;
 
 export interface HXMission {
   id: string;
   activeCheck?: "true" | "false";
   shouldIgnoreSenderVerification?: "true" | "false";
-  children: void | MissionChildren;
+  children: MissionChildren[];
 }
-
-type MissionChildren = void | HXGoals | HXEmail;
-
-// 用于测试
-const __xml = (
-  <mission id="awa" activeCheck="true" shouldIgnoreSenderVerification="true">
-    <goals>{undefined}</goals>
-  </mission>
-);
-const __xml2 = (
-  <mission id="awa" activeCheck="true" shouldIgnoreSenderVerification="true">
-    <goals>
-      <goal type="clearfolder" target="awa" path="" />
-    </goals>
-  </mission>
-);
-// console.log(render(xml).end({ headless: true, allowEmptyTags: true }));

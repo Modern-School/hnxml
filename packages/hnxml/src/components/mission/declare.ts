@@ -1,4 +1,5 @@
-import { HXEmail, HXMission } from "./index.tsx";
+import { HXMission, Mission } from "./index.tsx";
+import { HXMissionEmail, MissionEmail } from "./email.ts";
 import { HXGoal, HXGoals } from "./goals.ts";
 
 declare global {
@@ -7,7 +8,19 @@ declare global {
       mission: HXMission;
       goals: HXGoals;
       goal: HXGoal;
-      email: HXEmail;
+      missionStart: Mission.start;
+      missionEnd: Mission.end;
+      nextMission: Mission.next;
+      branchMissions: Mission.branchs;
+      branch: Mission.branch;
+      email: HXMissionEmail;
+      sender: MissionEmail.sender;
+      subject: MissionEmail.subject;
+      body: MissionEmail.body;
+      attachments: MissionEmail.attachments;
+      note: MissionEmail.Attachment.note;
+      link: MissionEmail.Attachment.link;
+      account: MissionEmail.Attachment.account;
     }
   }
 }

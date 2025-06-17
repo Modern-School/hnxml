@@ -153,3 +153,19 @@ export const playCustomSongImmediately = playCustomSongImmediatley;
  * ```
  */
 export const changeSongDLC = (): string => `changeSongDLC`;
+
+export default {
+  setFaction,
+  addRank,
+  addRankSilent,
+  addFlags,
+  removeFlags,
+  changeSong,
+  loadConditionalActions,
+  setHubServer,
+  setAssetServer,
+  playCustomSong,
+  playCustomSongImmediately,
+  playCustomSongImmediatley,
+  changeSongDLC,
+};

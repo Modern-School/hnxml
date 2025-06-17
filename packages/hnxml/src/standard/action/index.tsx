@@ -1,4 +1,4 @@
-import "./declare.ts";
+import "../../components/action.ts";
 
 export interface HXConditionalActions {
   children: void | string;

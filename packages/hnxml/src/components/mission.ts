@@ -1,6 +1,6 @@
 import { HXMission, Mission } from "./mission/index.ts";
 import { HXMissionEmail, MissionEmail } from "../standard/mission/email.ts";
-import { HXGoal, HXGoals } from "./mission/goals.ts";
+import { HXGoal, HXGoals } from "../standard/mission/goals.ts";
 
 declare global {
   namespace JSX {

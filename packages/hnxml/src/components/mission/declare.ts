@@ -1,4 +1,4 @@
-import { HXMission, Mission } from "./index.tsx";
+import { HXMission, Mission } from "./index.ts";
 import { HXMissionEmail, MissionEmail } from "./email.ts";
 import { HXGoal, HXGoals } from "./goals.ts";
 

@@ -1,4 +1,4 @@
-import type { HXConditionalActions } from "./index.tsx";
+import type { HXConditionalActions } from "../standard/action/index.tsx";
 
 declare global {
   namespace JSX {

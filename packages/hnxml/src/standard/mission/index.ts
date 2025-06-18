@@ -1,5 +1,4 @@
-import type { HXGoal, HXGoals } from "./goals.ts";
-import { render } from "jsx-xml";
+import type { HXGoals } from "./goals.ts";
 import type { HXMissionEmail } from "./email.ts";
 
 export namespace Mission {

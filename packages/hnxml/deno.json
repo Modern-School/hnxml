@@ -3,7 +3,9 @@
   "exports": {
     ".": "./index.ts",
     "./jsx/mission": "./src/components/mission.ts",
-    "./jsx/action": "./src/components/action.ts"
+    "./jsx/action": "./src/components/action.ts",
+    "./jsx/faction": "./src/components/faction.ts",
+    "./jsx/task": "./src/components/task.ts"
   },
   "compilerOptions": {
     "lib": [

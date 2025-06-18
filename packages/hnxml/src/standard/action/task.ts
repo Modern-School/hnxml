@@ -1,5 +1,5 @@
 /**
- * This module contains all Action task. The usage and examples are from https://github.com/AutumnRivers/hacknet-vscode, with some minor adjustments made on my part.. Thank you AutumnRivers!
+ * This module contains all Action task. The usage and examples are from <https://github.com/AutumnRivers/hacknet-vscode>, with some minor adjustments made on my part. Thank you AutumnRivers!
  * @module
  */
 
@@ -175,8 +175,8 @@ export namespace Task {
    */
   export interface LaunchHackScript {
     Filepath: string;
-    SourceComp: string;
-    TargetComp: string;
+    SourceComp?: string;
+    TargetComp?: string;
     RequireLogsOnSource: "true" | "false";
     RequireSourceIntact: "true" | "false";
     DelayHost?: string;

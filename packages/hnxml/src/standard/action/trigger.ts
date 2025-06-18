@@ -1,3 +1,7 @@
+/** 
+ * This module contains Triggers of Action. The usage and examples are from `IntroExtension\Actions\ExampleConditionalActionSet.xml`, with some minor adjustments made on my part.
+*/
+
 import { HXTask } from "./task.ts";
 
 type Tasks = void | HXTask | HXTask[];
@@ -10,6 +14,7 @@ export namespace Trigger {
   export interface OnConnect {
     target: string;
     needsMissionComplete?: "true" | "false";
+    requiredFlags?: string
     children: Tasks;
   }
   /**
@@ -20,6 +25,9 @@ export namespace Trigger {
     children: Tasks;
   }
 
+  /**
+   * triggered once the player gets admin access to the target machine
+   */
   export interface OnAdminGained {
     target: string;
     children: Tasks;
@@ -29,6 +37,7 @@ export namespace Trigger {
    * this triggers immediately, as soon as this is finished loading! Actions will happen in the order they appear in this file.
    */
   export interface Instantly {
+    needsMissionComplete: "true" | "false";
     children: Tasks;
   }
 

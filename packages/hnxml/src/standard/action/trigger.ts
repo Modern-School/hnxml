@@ -1,6 +1,6 @@
-/** 
+/**
  * This module contains Triggers of Action. The usage and examples are from `IntroExtension\Actions\ExampleConditionalActionSet.xml`, with some minor adjustments made on my part.
-*/
+ */
 
 import { HXTask } from "./task.ts";
 
@@ -14,7 +14,7 @@ export namespace Trigger {
   export interface OnConnect {
     target: string;
     needsMissionComplete?: "true" | "false";
-    requiredFlags?: string
+    requiredFlags?: string;
     children: Tasks;
   }
   /**

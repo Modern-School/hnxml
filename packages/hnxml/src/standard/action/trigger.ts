@@ -1,8 +1,8 @@
-import { HXTask as TriggerChildren } from "./task.ts";
+import { HXTask } from "./task.ts";
 
-type Tasks = void | TriggerChildren | TriggerChildren[];
+type Tasks = void | HXTask | HXTask[];
 
-export namespace ActionTrigger {
+export namespace Trigger {
   /**
    * This one is checked when the player connects to the PC with ID in the target field. needsMissionComplete and reqiuredFlags are optional
    * additional checks that you can apply.
@@ -46,8 +46,8 @@ export namespace ActionTrigger {
 }
 
 export type HXTrigger =
-  | ActionTrigger.OnConnect
-  | ActionTrigger.HasFlags
-  | ActionTrigger.OnAdminGained
-  | ActionTrigger.Instantly
-  | ActionTrigger.OnDisconnect;
+  | Trigger.OnConnect
+  | Trigger.HasFlags
+  | Trigger.OnAdminGained
+  | Trigger.Instantly
+  | Trigger.OnDisconnect;

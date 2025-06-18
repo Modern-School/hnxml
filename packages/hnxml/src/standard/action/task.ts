@@ -3,7 +3,7 @@
  * @module
  */
 
-export namespace Action {
+export namespace Task {
   /**
    * Run a mission function.
    * @example ```xml
@@ -361,25 +361,25 @@ export namespace Action {
   }
 }
 export type HXTask =
-  | Action.RunFunction
-  | Action.LoadMission
-  | Action.AddAsset
-  | Action.CopyAsset
-  | Action.AddMissionToHubServer
-  | Action.AddThreadToMissionBoard
-  | Action.AddIRCMessage
-  | Action.CrashComputer
-  | Action.DeleteFile
-  | Action.SaveGame
-  | Action.LaunchHackScript
-  | Action.SwitchToTheme
-  | Action.StartScreenBleedEffect
-  | Action.CancelScreenBleedEffect
-  | Action.AppendToFile
-  | Action.KillExe
-  | Action.HideNode
-  | Action.GivePlayerUserAccount
-  | Action.ChangeIP
-  | Action.HideAllNodes
-  | Action.ShowNode
-  | Action.SetLock;
+  | Task.RunFunction
+  | Task.LoadMission
+  | Task.AddAsset
+  | Task.CopyAsset
+  | Task.AddMissionToHubServer
+  | Task.AddThreadToMissionBoard
+  | Task.AddIRCMessage
+  | Task.CrashComputer
+  | Task.DeleteFile
+  | Task.SaveGame
+  | Task.LaunchHackScript
+  | Task.SwitchToTheme
+  | Task.StartScreenBleedEffect
+  | Task.CancelScreenBleedEffect
+  | Task.AppendToFile
+  | Task.KillExe
+  | Task.HideNode
+  | Task.GivePlayerUserAccount
+  | Task.ChangeIP
+  | Task.HideAllNodes
+  | Task.ShowNode
+  | Task.SetLock;

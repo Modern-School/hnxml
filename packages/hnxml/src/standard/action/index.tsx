@@ -1,12 +1,9 @@
-import "../../components/action.ts";
+import { HXTrigger } from "./trigger.ts";
 
 export interface HXConditionalActions {
-  children: void | string;
+  children: void | HXTrigger | HXTrigger[];
 }
 
 export function ConditionalActions(props: HXConditionalActions) {
   return <conditionalactions {...props}></conditionalactions>;
 }
-
-// 测试用
-const __xml3 = <ConditionalActions>awa</ConditionalActions>;

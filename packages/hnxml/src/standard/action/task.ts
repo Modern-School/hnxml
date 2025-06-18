@@ -109,7 +109,7 @@ export namespace Task {
   export interface AddIRCMessage {
     Author: string;
     TargetComp: string;
-    Delay: string;
+    Delay?: string;
     children: string;
   }
 

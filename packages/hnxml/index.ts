@@ -1,3 +1,1 @@
-import { render } from "jsx-xml";
-export { render };
-export default { render };
+export { CData, Comment, Fragment, Ins, render } from "jsx-xml";

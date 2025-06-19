@@ -74,7 +74,11 @@ export const removeFlags = (...args: string[]): string =>
  */
 export const changeSong = (): string => `changeSong`;
 
-export const loadConditionalActions = (): string => `loadConditionalActions`;
+/**
+ * Load in a new action file.
+ */
+export const loadConditionalActions = (path: string): string =>
+  `loadConditionalActions:${path}`;
 
 /**
  * Sets the server with the given ID to be the new hub server visually on the netmap.
@@ -111,6 +115,7 @@ export const playCustomSongImmediatley = (PATH_TO_SONG: string): string =>
  * Plays the specified song above without the fade in - instantly snaps to it.
  *
  * This function fixes Matt's mistake of writing `Immediatley` instead of `Immediately`.
+ * @see {@link playCustomSongImmediatley}
  */
 export const playCustomSongImmediately = playCustomSongImmediatley;
 

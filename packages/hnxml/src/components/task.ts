@@ -1,4 +1,8 @@
 import { Task } from "../standard/action/task.ts";
+
+/**
+ * Action Task's IntrinsicElements
+ */
 export interface Elements {
   RunFunction: Task.RunFunction;
   LoadMission: Task.LoadMission;

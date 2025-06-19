@@ -1,23 +1,36 @@
-import {
-  Comment as __Comment,
-  Fragment as __Fragment,
-  render as __render,
-} from "jsx-xml";
-
 /**
- * jsx-xml built-in components Comment
- * @see {@link https://github.com/smmoosavi/jsx-xml#comment}
+ * # hnxml.js
+ *
+ * [![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)](https://jsr.io/@modernschoolproject/hnxml)
+ * [![Github Badye](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
+ *
+ * a TypeScript-defined XML schema specification for Hacknet Extension, enabling
+ * JSX-compatible authoring. Additionally implements generator tools for other
+ * Hacknet Extension related content.
+ *
+ * Better docs is work in progress.
+ * @module
  */
-export const Comment = __Comment;
 
-/**
- * jsx-xml built-in components Fragment
- * @see {@link https://github.com/smmoosavi/jsx-xml#ins}
- */
-export const Fragment = __Fragment;
+export type { HXConditionalActions } from "./src/standard/action/index.ts";
+export type { HXTrigger, Trigger } from "./src/standard/action/trigger.ts";
+export type { HXTask, Task } from "./src/standard/action/task.ts";
 
-/**
- * returns an instance of XMLBuilder. Use `.end()` to get the XML string.
- * @see {@link https://github.com/smmoosavi/jsx-xml#usage}
- */
-export const render = __render;
+export type {
+  FactionTrigger,
+  HXCustomFaction,
+} from "./src/standard/faction/index.ts";
+
+export type { HXMission, Mission } from "./src/standard/mission/index.ts";
+export type { Goal, HXGoal, HXGoals } from "./src/standard/mission/goals.ts";
+export type {
+  HXMissionEmail,
+  MissionEmail,
+} from "./src/standard/mission/email.ts";
+
+export type {
+  Computer,
+  ComputerIcon,
+  HXComputer,
+} from "./src/standard/computer/index.ts";
+export type { Daemon } from "./src/standard/computer/daemon.ts";

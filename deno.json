@@ -8,5 +8,8 @@
   },
   "fmt": {
     "indentWidth": 2
+  },
+  "tasks": {
+    "docs":"deno doc --html --name=hnxml ./packages/hnxml/**/*.ts"
   }
 }

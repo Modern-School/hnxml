@@ -1,6 +1,7 @@
 # hnxml.js
 
-![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)
+[![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)](https://jsr.io/@modernschoolproject/hnxml)
+[![Github Badge](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
 
 a TypeScript-defined XML schema specification for Hacknet Extension, enabling
 JSX-compatible authoring. Additionally implements generator tools for other

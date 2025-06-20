@@ -1,14 +1,9 @@
 /**
  * # hnxml.js
  *
- * [![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)](https://jsr.io/@modernschoolproject/hnxml)
- * [![Github Badye](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
- *
  * a TypeScript-defined XML schema specification for Hacknet Extension, enabling
  * JSX-compatible authoring. Additionally implements generator tools for other
  * Hacknet Extension related content.
- *
- * Better docs is work in progress.
  * @module
  */
 

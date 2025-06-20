@@ -127,4 +127,35 @@ export namespace Computer {
     header: string;
     pass?: String;
   }
+  /**
+   * The tracker is the 'passive trace' - if this tag is here, after a player disconnects from this machine
+   * if they have left logs downloading or deleting a file, they will be attacked by an auto-generated AI hacker
+   * that will try and reset them, or make them do the ETAS if the player has the flag `CSEC_Member`
+   */
+  export type tracker = { children?: never };
+  /**
+   * Adding this section will create a second computer on load, attached to this
+   * which is an eos device, all set up, with these files on it.
+   *
+   * It'll also automatically generate some apps and save files and things
+   * for flavor.
+   */
+  export namespace eosDevice {
+    export interface root {
+      name: string;
+      id: string;
+      icon: ComputerIcon;
+      empty?: "true" | "false";
+      passOverride?: string;
+      children: void | Children | Children[];
+    }
+    export type note = { children: void | string };
+    export interface mail {
+      username: string;
+      pass: string;
+      children?: never;
+    }
+    export type file = Computer.file;
+    export type Children = note | mail | file;
+  }
 }

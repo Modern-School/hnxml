@@ -7,26 +7,6 @@ import { ComputerIcon } from "./index.ts";
 import { Computer } from "./index.ts";
 
 export namespace Daemon {
-  export type tracker = { children?: never };
-
-  export namespace eosDevice {
-    export interface root {
-      name: string;
-      id: string;
-      icon: ComputerIcon;
-      empty?: "true" | "false";
-      passOverride?: string;
-      children: void | Children | Children[];
-    }
-    export type note = { children: void | string };
-    export interface mail {
-      username: string;
-      pass: string;
-      children?: never;
-    }
-    export type file = Computer.file;
-    export type Children = note | mail | file;
-  }
   export namespace mailServer {
     export interface root {
       name: string;
@@ -162,16 +142,21 @@ export namespace Daemon {
   }
   export namespace DatabaseDaemon {
     export namespace GitCommitEntry {
-      type GitCommitEntryChildren = EntryNumber | ChangeFiles | Message | UserName | SourceIP
+      type GitCommitEntryChildren =
+        | EntryNumber
+        | ChangeFiles
+        | Message
+        | UserName
+        | SourceIP;
       export interface root {
-        children: GitCommitEntryChildren
+        children: GitCommitEntryChildren;
       }
-      export type EntryNumber = { children: string }
-      export type ChangeFiles = { children: _String }
-      export type _String = { children: string }
-      export type Message = { children: string }
-      export type UserName = { children: string }
-      export type SourceIP = { children: string }
+      export type EntryNumber = { children: string };
+      export type ChangeFiles = { children: _String };
+      export type _String = { children: string };
+      export type Message = { children: string };
+      export type UserName = { children: string };
+      export type SourceIP = { children: string };
     }
 
     export namespace TextRecord {
@@ -198,7 +183,14 @@ export namespace Daemon {
     }
 
     export namespace CAROData {
-      type CARODataChildren = UserID | Headshots | Kills | Rank | Crowbars | InventoryID | BanStatus;
+      type CARODataChildren =
+        | UserID
+        | Headshots
+        | Kills
+        | Rank
+        | Crowbars
+        | InventoryID
+        | BanStatus;
 
       export interface root {
         children: CARODataChildren;
@@ -214,7 +206,16 @@ export namespace Daemon {
     }
 
     export namespace Account {
-      type AccountChildren = ID | Cash | Bank | Apartments | Vehicles | PegasusVehicles | Rank | RP | Kills;
+      type AccountChildren =
+        | ID
+        | Cash
+        | Bank
+        | Apartments
+        | Vehicles
+        | PegasusVehicles
+        | Rank
+        | RP
+        | Kills;
 
       export interface root {
         children: AccountChildren;
@@ -231,7 +232,12 @@ export namespace Daemon {
       export type Kills = { children: string };
     }
     export namespace SurveillanceProfile {
-      type SurveillanceProfileChildren = Name | Age | HomeCity | Notes | CriminalRecord;
+      type SurveillanceProfileChildren =
+        | Name
+        | Age
+        | HomeCity
+        | Notes
+        | CriminalRecord;
 
       export interface root {
         children: SurveillanceProfileChildren;
@@ -255,25 +261,23 @@ export namespace Daemon {
       export type IP = { children: string };
       export type SpecialNotes = { children: string };
     }
-    type DatabaseDaemonDataTypeString<T> =
-
-      T extends GitCommitEntry.root ? "GitCommitEntry" :
-      T extends TextRecord.root ? "TextRecord" :
-      T extends OnlineAccount.root ? "OnlineAccount" :
-      T extends CAROData.root ? "CAROData" :
-      T extends Account.root ? "Account" :
-      T extends SurveillanceProfile.root ? "SurveillanceProfile" :
-      T extends AgentDetails.root ? "AgentDetails" :
-      never
-      ;
+    type DatabaseDaemonDataTypeString<T> = T extends GitCommitEntry.root
+      ? "GitCommitEntry"
+      : T extends TextRecord.root ? "TextRecord"
+      : T extends OnlineAccount.root ? "OnlineAccount"
+      : T extends CAROData.root ? "CAROData"
+      : T extends Account.root ? "Account"
+      : T extends SurveillanceProfile.root ? "SurveillanceProfile"
+      : T extends AgentDetails.root ? "AgentDetails"
+      : never;
     export interface root<T> {
-      Permissions?: "public" | "private"
-      DataType: DatabaseDaemonDataTypeString<T>
-      Foldername?: string
-      Color: string
-      AdminEmailAccount: string
-      AdminEmailHostID: string
-      Name: string
+      Permissions?: "public" | "private";
+      DataType: DatabaseDaemonDataTypeString<T>;
+      Foldername?: string;
+      Color: string;
+      AdminEmailAccount: string;
+      AdminEmailHostID: string;
+      Name: string;
     }
   }
 }

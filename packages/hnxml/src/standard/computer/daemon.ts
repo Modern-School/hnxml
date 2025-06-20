@@ -160,4 +160,120 @@ export namespace Daemon {
       children: void | string;
     }
   }
+  export namespace DatabaseDaemon {
+    export namespace GitCommitEntry {
+      type GitCommitEntryChildren = EntryNumber | ChangeFiles | Message | UserName | SourceIP
+      export interface root {
+        children: GitCommitEntryChildren
+      }
+      export type EntryNumber = { children: string }
+      export type ChangeFiles = { children: _String }
+      export type _String = { children: string }
+      export type Message = { children: string }
+      export type UserName = { children: string }
+      export type SourceIP = { children: string }
+    }
+
+    export namespace TextRecord {
+      type TextRecordChildren = Title | Data;
+
+      export interface root {
+        children: TextRecordChildren;
+      }
+
+      export type Title = { children: string };
+      export type Data = { children: string };
+    }
+    export namespace OnlineAccount {
+      type OnlineAccountChildren = ID | Username | BanStatus | Notes;
+
+      export interface root {
+        children: OnlineAccountChildren;
+      }
+
+      export type ID = { children: string };
+      export type Username = { children: string };
+      export type BanStatus = { children: string };
+      export type Notes = { children: string };
+    }
+
+    export namespace CAROData {
+      type CARODataChildren = UserID | Headshots | Kills | Rank | Crowbars | InventoryID | BanStatus;
+
+      export interface root {
+        children: CARODataChildren;
+      }
+
+      export type UserID = { children: string };
+      export type Headshots = { children: string };
+      export type Kills = { children: string };
+      export type Rank = { children: string };
+      export type Crowbars = { children: string };
+      export type InventoryID = { children: string };
+      export type BanStatus = { children: string };
+    }
+
+    export namespace Account {
+      type AccountChildren = ID | Cash | Bank | Apartments | Vehicles | PegasusVehicles | Rank | RP | Kills;
+
+      export interface root {
+        children: AccountChildren;
+      }
+
+      export type ID = { children: string };
+      export type Cash = { children: string };
+      export type Bank = { children: string };
+      export type Apartments = { children: string };
+      export type Vehicles = { children: string };
+      export type PegasusVehicles = { children: string };
+      export type Rank = { children: string };
+      export type RP = { children: string };
+      export type Kills = { children: string };
+    }
+    export namespace SurveillanceProfile {
+      type SurveillanceProfileChildren = Name | Age | HomeCity | Notes | CriminalRecord;
+
+      export interface root {
+        children: SurveillanceProfileChildren;
+      }
+
+      export type Name = { children: string };
+      export type Age = { children: string };
+      export type HomeCity = { children: string };
+      export type Notes = { children: string };
+      export type CriminalRecord = { children: string };
+    }
+    export namespace AgentDetails {
+      type AgentDetailsChildren = Codename | RealName | IP | SpecialNotes;
+
+      export interface root {
+        children: AgentDetailsChildren;
+      }
+
+      export type Codename = { children: string };
+      export type RealName = { children: string };
+      export type IP = { children: string };
+      export type SpecialNotes = { children: string };
+    }
+    type DatabaseDaemonDataTypeString<T> =
+
+      T extends GitCommitEntry.root ? "GitCommitEntry" :
+      T extends TextRecord.root ? "TextRecord" :
+      T extends OnlineAccount.root ? "OnlineAccount" :
+      T extends CAROData.root ? "CAROData" :
+      T extends Account.root ? "Account" :
+      T extends SurveillanceProfile.root ? "SurveillanceProfile" :
+      T extends AgentDetails.root ? "AgentDetails" :
+      never
+      ;
+    export interface root<T> {
+      Permissions?: "public" | "private"
+      DataType: DatabaseDaemonDataTypeString<T>
+      Foldername?: string
+      Color: string
+      AdminEmailAccount: string
+      AdminEmailHostID: string
+      Name: string
+    }
+  }
 }

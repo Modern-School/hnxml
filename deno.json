@@ -4,12 +4,15 @@
   ],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",
-    "jsx-xml": "npm:jsx-xml@^0.3.0"
+    "highlight.js": "npm:highlight.js@^11.11.1",
+    "jsx-xml": "npm:jsx-xml@^0.3.0",
+    "typedoc": "npm:typedoc@^0.28.5"
   },
   "fmt": {
     "indentWidth": 2
   },
   "tasks": {
-    "docs": "deno doc --html --name=hnxml --private ./packages/hnxml/index.ts"
-  }
+    "docs": "deno run --allow-read --allow-env --allow-run npm:typedoc packages/hnxml/index.ts --skipErrorChecking --options packages/hnxml/typedoc.config.json"
+  },
+  "nodeModulesDir": "none"
 }

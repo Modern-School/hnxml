@@ -1,0 +1,23 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./index.ts"
+  ],
+  "name": "hnxml",
+  "readme": "README.md",
+  "excludeExternals": true,
+  "theme": "default",
+  "outputs": [
+    {
+      "name": "html",
+      "path": "../../docs"
+    }
+  ],
+  "highlightLanguages": [
+    "xml",
+    "bash",
+    "json",
+    "tsx",
+    "typescript"
+  ]
+}

@@ -1,12 +1,7 @@
 /**
- * # hnxml.js
- *
- * a TypeScript-defined XML schema specification for Hacknet Extension, enabling
- * JSX-compatible authoring. Additionally implements generator tools for other
- * Hacknet Extension related content.
+ * # Hnxml Standard
  * @module
  */
-
 export type { HXConditionalActions } from "./src/standard/action/index.ts";
 export type { HXTrigger, Trigger } from "./src/standard/action/trigger.ts";
 export type { HXTask, Task } from "./src/standard/action/task.ts";

@@ -4,7 +4,6 @@
   ],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",
-    "highlight.js": "npm:highlight.js@^11.11.1",
     "jsx-xml": "npm:jsx-xml@^0.3.0",
     "typedoc": "npm:typedoc@^0.28.5"
   },

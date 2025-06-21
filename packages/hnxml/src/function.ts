@@ -116,6 +116,8 @@ export const playCustomSongImmediatley = (PATH_TO_SONG: string): string =>
  *
  * This function fixes Matt's mistake of writing `Immediatley` instead of `Immediately`.
  * @see {@link playCustomSongImmediatley}
+ *
+ * @inheritDoc playCustomSongImmediatley
  */
 export const playCustomSongImmediately = playCustomSongImmediatley;
 

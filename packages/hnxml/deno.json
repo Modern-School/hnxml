@@ -8,6 +8,7 @@
     "./jsx/faction": "./src/components/faction.ts",
     "./jsx/task": "./src/components/task.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
+    "./function": "./src/function.ts",
     "./jsx": "./jsx.ts"
   },
   "compilerOptions": {

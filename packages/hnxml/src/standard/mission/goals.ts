@@ -46,7 +46,8 @@ export namespace Goal {
 
   /**
    * Task to delete ALL files on node target, in the folder at path
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="clearfolder" target="advExamplePC" path="home"/>
    * ```
    */
@@ -129,7 +130,8 @@ export namespace Goal {
    * This is mostly only useful for use with the "activeCheck" flag on the mission set to true.
    * A mission with a delay goal, that is silenced and that's set to auto-check essentially acts as a delay timer buffer between responses for missions
    * This can add a human-feeling response time to missions.
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="delay" time="10.0"/>
    * ```
    */
@@ -143,7 +145,8 @@ export namespace Goal {
    *
    * Mission end functions can use the function addFlags:[flagname],[flagname2],[etc] to set flags, then you can have a mission only complete if a flag is set.
    * Some daemons add flags when events happen. For example, a pacemaker server adds the flag "PATIENT_NAME:DEAD" when the patient dies.
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="hasflag" target="flagName"/>
    * ```
    */
@@ -155,7 +158,8 @@ export namespace Goal {
   /**
    * Task to upload the file on server bitMission00 at bin/target_filename.txt to server with ID "destComp" to folder bin
    * The folder name Dest/Uploads is the folder that files are uploaded to when using an Upload server daemon, so it's the most useful location normally
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="fileupload" target="advExamplePC" file="asdf.txt" path="home" destTarget="introFactionHomeNode" destPath="Drop/Uploads"/>
    * ```
    * For upload tasks, adding the flag decrypt=true requires the player the decypher the file before uploading it. If that file is password protected, you must include the password
@@ -163,7 +167,8 @@ export namespace Goal {
    *
    * For uploading encrypted files - put the encrypted name here (ending with .dec usually). It doesn't matter what the filename of the decrypted one becomes
    * The code will check for the right content.
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="fileupload" target="advExamplePC" file="asdf2.dec" path="home" destTarget="introFactionHomeNode" destPath="home" decrypt="true" decryptPass="password"/>
    * ```
    */
@@ -185,7 +190,8 @@ export namespace Goal {
    * The academic server must have the following properties:\
    * 1: ID must be "academic" \
    * 2: It must contain an Academic Database Daemon-
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="AddDegree" owner="John Stalvern" degree="Masters in Digital Security" uni="Manchester University" gpa="3.0"/>
    * ```
    */
@@ -199,7 +205,8 @@ export namespace Goal {
 
   /**
    * Task to remove all degrees from the academic server for a specified owner. Note that for this one, you *MUST* have the ID of your database be "academic" or it wont find it.
-   * @example ```xml
+   * @example
+   * ```xml
    * <goal type="wipedegrees" owner="John Stalvern"/>
    * ```
    */
@@ -227,7 +234,8 @@ export namespace Goal {
 
   /**
    * Task to get admin password string (DLC only)
-   * @example ```xml
+   * @example
+   * ```xml
    * <!-- DLC Goals -->
    * <goal type="getadminpasswordstring" target="advExamplePC"/>
    * ```
@@ -238,7 +246,8 @@ export namespace Goal {
   };
 
   /** Death row missions **not implemented** for mods yet. This type is declared but will never be used.
-   * @example ```xml
+   * @example
+   * ```xml
    * <!-- Death row missions not implemented for mods yet -->
    * <goal type="removeDeathRowRecord" fname="Matt" lname="Trobbiani"/> -->
    * ```
@@ -246,7 +255,8 @@ export namespace Goal {
   type RemoveDeathRowRecord = never;
 
   /** Death row missions **not implemented** for mods yet. This type is declared but will never be used.
-   * @example ```xml
+   * @example
+   * ```xml
    * <!-- Death row missions not implemented for mods yet -->
    * <goal type="modifyDeathRowRecord" fname="Matt" lname="Trobbiani">Last Words Here</DeathRowMission>
    */

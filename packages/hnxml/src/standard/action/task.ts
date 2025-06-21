@@ -6,7 +6,8 @@
 export namespace Task {
   /**
    * Run a mission function.
-   * @example ```xml
+   * @example
+   * ```xml
    * <RunFunction FunctionName="changeSong" FunctionValue="2" DelayHost="delayNode" Delay="1.0"/>
    * ```
    */
@@ -31,7 +32,8 @@ export namespace Task {
 
   /**
    * Remotely add an asset to the target node.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AddAsset FileName="test" FileContents="test" TargetComp="playerComp" TargetFolderpath="home"/>
    * ```
    */
@@ -45,7 +47,8 @@ export namespace Task {
 
   /**
    * Copy a file from a remote node.
-   * @example ```xml
+   * @example
+   * ```xml
    * <CopyAsset DestFilePath="home" DestComp="playerComp" SourceComp="assetNode" SourceFileName="copycat.txt" SourceFilePath="home/copy"/>
    * ```
    */
@@ -60,7 +63,8 @@ export namespace Task {
 
   /**
    * Add a mission file to a mission hub.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AddMissionToHubServer MissionFilepath="Missions/HubMission.xml" TargetComp="missionHub" AssignmentTag="Kaguya"/>
    * ```
    */
@@ -73,7 +77,8 @@ export namespace Task {
 
   /**
    * Remove a mission file from a mission hub.
-   * @example ```xml
+   * @example
+   * ```xml
    * <RemoveMissionFromHubServer MissionFilepath="Missions/HubMission.xml" TargetComp="missionHub"/>
    * ```
    */
@@ -85,7 +90,8 @@ export namespace Task {
 
   /**
    * Add a thread to an /el Sec-like board.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AddThreadToMissionBoard ThreadFilepath="Docs/Thread.txt" TargetComp="elSec"/>
    * ```
    */
@@ -97,7 +103,8 @@ export namespace Task {
 
   /**
    * Add a generic IRC message.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AddIRCMessage Author="Kaguya" TargetComp="ircNode" Delay="1">HI</AddIRCMessage>
    * <AddIRCMessage Author="Kaguya" TargetComp="ircNode" Delay="1">!ATTACHMENT:note#%#Note Title#%#Note Content line1
    * Note line 2
@@ -115,7 +122,8 @@ export namespace Task {
 
   /**
    * Crash a node
-   * @example ```xml
+   * @example
+   * ```xml
    * <CrashComputer TargetComp="playerComp" CrashSource="enemyNode" DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -129,7 +137,8 @@ export namespace Task {
 
   /**
    * Delete a file.
-   * @example ```xml
+   * @example
+   * ```xml
    * <DeleteFile TargetComp="playerComp" FilePath="home" FileName="deleteme.txt" DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -144,7 +153,8 @@ export namespace Task {
 
   /**
    * Load in a new action file.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AddConditionalActions Filepath="Actions/NextAction.xml" DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -157,7 +167,8 @@ export namespace Task {
 
   /**
    * Save the game.
-   * @example ```xml
+   * @example
+   * ```xml
    * <SaveGame DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -169,7 +180,8 @@ export namespace Task {
 
   /**
    * Launch a hacker script.
-   * @example ```xml
+   * @example
+   * ```xml
    * <LaunchHackScript Filepath="Scripts/HackerScript.txt" DelayHost="delayNode" Delay="0" SourceComp="enemyNode" TargetComp="playerComp" RequireLogsOnSource="false" RequireSourceIntact="true"/>
    * ```
    */
@@ -186,7 +198,8 @@ export namespace Task {
 
   /**
    * Flicker the player into a new theme.
-   * @example ```xml
+   * @example
+   * ```xml
    * <SwitchToTheme ThemePathOrName="Themes/ExampleTheme.xml" FlickerInDuration="3.0" DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -200,7 +213,8 @@ export namespace Task {
 
   /**
    * Start a screen bleed effect, mostly used in sequencers.
-   * @example ```xml
+   * @example
+   * ```xml
    * <StartScreenBleedEffect AlertTitle="Sequencer Attack" CompleteAction="Actions/ScreenBleedFailed.xml" TotalDurationSeconds="" DelayHost="delayNode" Delay="0">Break into the Moonshine servers
    * Delete all files and backups
    * Get out of there!</StartScreenBleedEffect>
@@ -217,7 +231,8 @@ export namespace Task {
 
   /**
    * Stop a screen bleed effect.
-   * @example ```xml
+   * @example
+   * ```xml
    * <CancelScreenBleedEffect DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -229,7 +244,8 @@ export namespace Task {
 
   /**
    * Append text to a file.
-   * @example ```xml
+   * @example
+   * ```xml
    * <AppendToFile DelayHost="delayNode" Delay="0" TargetComp="companyWhitelist" TargetFolderpath="Whitelist" TargetFilename="list.txt">#PLAYER_IP#</AppendToFile>
    * ```
    */
@@ -243,7 +259,8 @@ export namespace Task {
   }
   /**
    * Kill any currently running exe with the title. Use * in ExeName to kill all currently running executables.
-   * @example ```xml
+   * @example
+   * ```xml
    * <KillExe DelayHost="delayNode" Delay="0" ExeName="*"/>
    * ```
    */
@@ -256,7 +273,8 @@ export namespace Task {
 
   /**
    * Hide a node from the NetMap.
-   * @example ```xml
+   * @example
+   * ```xml
    * <HideNode DelayHost="delayNode" Delay="0" TargetComp="companySecurity"/>
    * ```
    */
@@ -269,7 +287,8 @@ export namespace Task {
 
   /**
    * Give the player an existing account so they can automatically login to the specified node.
-   * @example ```xml
+   * @example
+   * ```xml
    * <GivePlayerUserAccount DelayHost="delayNode" Delay="0" TargetComp="teamHub" Username="#PLAYERNAME#"/>
    * ```
    */
@@ -282,7 +301,8 @@ export namespace Task {
   }
   /**
    * Change the IP of a specified node. Leave NewIP blank for a random IP.
-   * @example ```xml
+   * @example
+   * ```xml
    * <ChangeIP  DelayHost="delayNode" Delay="0" TargetComp="finalNode" NewIP="123.123.123.123"/>
    * ```
    */
@@ -296,7 +316,8 @@ export namespace Task {
 
   /**
    * Hides all nodes visible on the NetMap.
-   * @example ```xml
+   * @example
+   * ```xml
    * <HideAllNodes DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -308,7 +329,8 @@ export namespace Task {
 
   /**
    * Reveals a node on the NetMap.
-   * @example ```xml
+   * @example
+   * ```xml
    * <ShowNode DelayHost="delayNode" Delay="0" Target="storageServer"/>
    * ```
    */
@@ -320,7 +342,8 @@ export namespace Task {
   }
   /**
    * Locks or hides the specified module. Choices are terminal, ram, netmap, and display.
-   * @example ```xml
+   * @example
+   * ```xml
    * <SetLock DelayHost="delayNode" Delay="0" Module="terminal" IsLocked="true" IsHidden="false"/>
    * ```
    */
@@ -335,7 +358,8 @@ export namespace Task {
 
   /**
    * LABYRINTHS DLC ONLY - Change the mail icon to irc, irchub, board, or mail.
-   * @example ```xml
+   * @example
+   * ```xml
    * <ChangeAlertIcon Target="mainHub" Type="irchub" DelayHost="delayNode" Delay="0"/>
    * ```
    */
@@ -349,7 +373,8 @@ export namespace Task {
 
   /**
    * Change the way the netmap is sorted.
-   * @example ```xml
+   * @example
+   * ```xml
    * <ChangeNetmapSortMethod DelayHost="delayNode" Delay="0" Method="grid"/>
    * ```
    */

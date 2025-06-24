@@ -6,6 +6,10 @@
   "hideGenerator": true,
   "includeHierarchySummary": false,
   "useFirstParagraphOfCommentAsSummary": true,
+  "headings": {
+    "readme": false,
+    "document": false
+  },
   "blockTags": [
     "@defaultValue",
     "@deprecated",

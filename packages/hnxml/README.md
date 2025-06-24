@@ -1,15 +1,14 @@
-# Hnxml Standard and hnxml.js
+# hnxml.js
 
 [![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)](https://jsr.io/@modernschoolproject/hnxml)
 [![Github Badge](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
 
 Hnxml Standard is a TypeScript-based XML schema specification for Hacknet
-extensions.
+extensions, and it is defined by `hnxml.js`. `hnxml.js` also provides
+JSX-compatible authoring support and additional generator tools for
+Hacknet-related content generating.
 
-`hnxml.js` defines this standard, providing JSX-compatible authoring support and
-additional generator tools for Hacknet-related content.
-
-Note: This project is currently in active development and may not yet fully
+Note: This project is currently in active development and may not lyet fuly
 implement all specifications.
 
 ## Hnxml Standard
@@ -20,19 +19,31 @@ You can access Hnxml Standard through:
   [hnxml.js.org](https://hnxml.js.org)
 - Source code: [GitHub Repository](https://github.com/xxx/hnxml)
 
-## JSX Usage
+## Use `hnxml.js` with JSX
 
-Add package `@modernschoolproject/hnxml`
+Add package `@modernschoolproject/hnxml` via deno
 
 ```bash
 # deno 
 deno add jsr:@modernschoolproject/hnxml
+```
+
+```bash
 # npm
 npx jsr add @modernschoolproject/hnxml
+```
+
+```bash
 # yarn
 yarn add jsr:@modernschoolproject/hnxml
+```
+
+```bash
 # pnpm
 pnpm i jsr:@modernschoolproject/hnxml
+```
+
+```bash
 # bun
 bunx jsr add @modernschoolproject/hnxml
 ```
@@ -48,8 +59,8 @@ Edit `compilerOptions` in `tsconfig.json` or `deno.json`
 }
 ```
 
-Then declare the `JSX.IntrinsicElements` by which type of Hacknet Extension XML
-you want to generate.
+Then declare `JSX.IntrinsicElements` for the Hacknet Extension XML types you
+want to generate.
 
 For example, if you want to use `Mission`:
 

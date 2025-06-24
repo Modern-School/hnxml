@@ -4,6 +4,8 @@
   "theme": "default",
   "customFooterHtml": "Generated using <a href=\"https://typedoc.org/\" target=\"_blank\">TypeDoc</a>. Released under the <a href=\"https://opensource.org/license/MIT\" target=\"_blank\">MIT License</a>. Copyright © 2025 <a href=\"https://github.com/FBIKdot\" target=\"_blank\">FBIK.</a>",
   "hideGenerator": true,
+  "includeHierarchySummary": false,
+  "useFirstParagraphOfCommentAsSummary": true,
   "blockTags": [
     "@defaultValue",
     "@deprecated",

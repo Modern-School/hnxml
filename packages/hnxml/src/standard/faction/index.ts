@@ -1,4 +1,4 @@
-import { HXTask } from "../action/task.ts";
+import { AllTasks } from "../action/task.ts";
 
 export interface HXCustomFaction {
   name: string;
@@ -10,5 +10,5 @@ export interface HXCustomFaction {
 export interface FactionTrigger {
   ValueRequired?: string;
   Flags?: string;
-  children: void | HXTask | HXTask[];
+  children: void | AllTasks | AllTasks[];
 }

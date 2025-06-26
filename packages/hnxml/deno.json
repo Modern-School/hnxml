@@ -11,6 +11,10 @@
     "./function": "./src/function.ts",
     "./jsx": "./jsx.ts"
   },
+  "exclude": [
+    "./typedoc.config.json",
+    "./docs.md"
+  ],
   "compilerOptions": {
     "lib": [
       "esnext",

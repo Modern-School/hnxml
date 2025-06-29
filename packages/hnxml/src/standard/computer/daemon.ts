@@ -3,9 +3,6 @@
  * @module
  */
 
-import { ComputerIcon } from "./index.ts";
-import { Computer } from "./index.ts";
-
 export namespace Daemon {
   export namespace mailServer {
     export interface root {
@@ -279,5 +276,38 @@ export namespace Daemon {
       AdminEmailHostID: string;
       Name: string;
     }
+    export type AllDatabaseDaemon =
+      | GitCommitEntry.root
+      | TextRecord.root
+      | OnlineAccount.root
+      | CAROData.root
+      | Account.root
+      | SurveillanceProfile.root
+      | AgentDetails.root;
   }
 }
+
+export type AllDaemon =
+  | Daemon.mailServer.root
+  | Daemon.uploadServerDaemon
+  | Daemon.addWebServer
+  | Daemon.addOnlineWebServer
+  | Daemon.deathRowDatabase
+  | Daemon.academicDatabase
+  | Daemon.ispSystem
+  | Daemon.messageBoard.root
+  | Daemon.MedicalDatabase
+  | Daemon.PointClicker
+  | Daemon.SongChangerDaemon
+  | Daemon.variableMissionListingServer
+  | Daemon.missionHubServer
+  | Daemon.CreditsDaemon
+  | Daemon.FastActionHost
+  | Daemon.memoryDumpFile
+  | Daemon.Memory.root
+  | Daemon.CustomConnectDisplayDaemon
+  | Daemon.LogoCustomConnectDisplayDaemon
+  | Daemon.WhitelistAuthenticatorDaemon
+  | Daemon.MarkovTextDaemon
+  | Daemon.IRCDaemon.root
+  | Daemon.DatabaseDaemon.root<Daemon.DatabaseDaemon.AllDatabaseDaemon>;

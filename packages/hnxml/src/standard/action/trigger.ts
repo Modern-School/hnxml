@@ -6,7 +6,7 @@
  * @module
  */
 
-import { HXTask } from "./task.ts";
+import { TaskElement } from "./task.ts";
 
 /**
  * the Trigger. Child Elements of Trigger are all types of Task.
@@ -43,7 +43,7 @@ export namespace Trigger {
      * @localeCN 需要获得的所有目标Flags。书写方式：```"Flag1,Flag2,Flag3..."```
      */
     requiredFlags?: string;
-    children: HXTask;
+    children: TaskElement;
   }
   /**
    * Triggers once the player has *all* of the flags in a comma separated list in requiredFlags.
@@ -63,7 +63,7 @@ export namespace Trigger {
      * @localeCN 需要获得的所有目标Flags。书写方式：```"Flag1,Flag2,Flag3..."```
      */
     requiredFlags: string;
-    children: HXTask;
+    children: TaskElement;
   }
 
   /**
@@ -82,7 +82,7 @@ export namespace Trigger {
      * Computer ID
      */
     target: string;
-    children: HXTask;
+    children: TaskElement;
   }
 
   /**
@@ -104,7 +104,7 @@ export namespace Trigger {
      * @localeCN 是否需要任务完成
      */
     needsMissionComplete: "true" | "false";
-    children: HXTask;
+    children: TaskElement;
   }
 
   /**
@@ -134,7 +134,7 @@ export namespace Trigger {
    */
   export interface OnDisconnect {
     target?: string;
-    children: HXTask;
+    children: TaskElement;
   }
 }
 

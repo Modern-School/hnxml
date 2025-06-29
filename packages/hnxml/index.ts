@@ -32,7 +32,11 @@
  */
 export type { HXConditionalActions } from "./src/standard/action/index.ts";
 export type { AllTriggers, Trigger } from "./src/standard/action/trigger.ts";
-export type { AllTasks, HXTask, Task } from "./src/standard/action/task.ts";
+export type {
+  AllTasks,
+  Task,
+  TaskElement,
+} from "./src/standard/action/task.ts";
 
 export type {
   FactionTrigger,

@@ -433,6 +433,10 @@ export namespace Task {
   }
 }
 
+/**
+ * all types of Task
+ * @localeCN 所有类型的 Task.
+ */
 export type AllTasks =
   | Task.RunFunction
   | Task.LoadMission
@@ -457,4 +461,4 @@ export type AllTasks =
   | Task.ShowNode
   | Task.SetLock;
 
-export type HXTask = void | AllTasks | AllTasks[];
+export type TaskElement = void | AllTasks | AllTasks[];

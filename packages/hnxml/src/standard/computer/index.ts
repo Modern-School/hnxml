@@ -226,6 +226,18 @@ export namespace Computer {
     target: string;
     children?: never;
   }
+  /**
+   * This positions this computer near the target on the network map
+   * Position is it's position radially around it, and total is the
+   * number of radially surrounding nodes it has - this way you can create
+   * cool looking networks
+   *
+   * ExtraDistance should be between -0.6 and 0.3 - anything bigger will seem really far away, and can cause problems.
+   * 0.1 is a good distance.
+   *
+   * the "force" tag ensures that this node is positioned exactly where it's defined here, regardless of overlaps with other nodes etc.
+   * It basically prevents the checks that ensure stability, but guarantees that it'll be placed close.
+   */
   export interface positionNear {
     target: string;
     pisition: string;
@@ -234,24 +246,58 @@ export namespace Computer {
     force: "true" | "false";
     children?: never;
   }
+  /**
+   * Files
+   */
   export interface file {
     path: string;
     name: string;
     children: void | string;
   }
+  /**
+   * Creates a file for custom theme in a node.
+   * @localeCN 自定义 theme 的文件
+   * @example
+   * ```xml
+   * <customthemefile path="sys" name="Custom_x-server.sys" themePath="Themes/SecondaryTheme.xml"/>
+   * ```
+   */
   export interface customthemefile {
     path: string;
     name: string;
     themePath: string;
     childre: void | string;
   }
+  /**
+   * This generates an encrypted file that can be decrypted using `Decypher.exe`
+   * @example
+   * ```xml
+   * <encryptedFile path="home" name="encrypted_File.dec" extension=".txt" ip="192.168.1.1" header="This is the header" pass="decryptionPassword">
+   *   This generates an encrypted file that can be decrypted using the password above. It decrypts to have the extension .txt
+   * </encryptedFile>
+   * <encryptedFile path="home" name="easy_encrypted_File.dec" ip="192.168.1.1" header="This is the header">
+   *   By simply not providing a password like this one, it can be decrypted without a password
+   * </encryptedFile>
+   * <encryptedFile path="home" name="asdf2.dec" ip="192.168.1.1" header="This is the header" pass="password">
+   *    This is an encrypted file referenced in ExampleMission.xml
+   * </encryptedFile>
+   * ```
+   */
   export interface encryptedFile {
     path: string;
     name: string;
+    /**
+     * the extension it decrypts to have
+     * @localeCN 解密后的文件扩展名
+     */
     extension?: string;
+    /**
+     * the IP of the node which encrypted it
+     * @localeCN 加密该文件的节点的IP
+     */
     ip: string;
     header: string;
-    pass?: String;
+    pass?: string;
   }
   /**
    * The tracker is the 'passive trace' - if this tag is here, after a player disconnects from this machine

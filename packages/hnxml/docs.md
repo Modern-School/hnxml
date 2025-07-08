@@ -6,8 +6,8 @@
 Hnxml Standard (hnstd) is a TypeScript-based XML schema specification for
 Hacknet extensions, and it is defined by the source code of `hnxml.js`.
 
-The homepage of this site is Hnxml Standard. You can access Hnxml.js API Docs
-through [Hnxml.js API Docs](https://hnxml.js.org/api).
+The homepage of this site is Hnxml Standard. You can access hnxml.js API Docs
+through [hnxml.js API Docs](https://hnxml.js.org/api).
 
 Browse [modules](./modules.html) to understand how different types correspond to
 various Hacknet Extension XML tags.
@@ -21,7 +21,7 @@ Hnxml Standard (hnstd) 是一种基于 TypeScript 的 XML 模式规范，专为 
 Extension 设计，它由 `hnxml.js` 的源代码定义。
 
 本网站的主页是 Hnxml Standard 的文档。您可以在
-[Hnxml.js API 文档](https://hnxml.js.org/api) 中查阅相关 API 接口。
+[hnxml.js API 文档](https://hnxml.js.org/api) 中查阅 hnxml.js API 接口。
 
 你可以通过浏览 [modules](./modules.html) 了解不同类型如何对应各种 Hacknet
 Extension XML 标签。

@@ -145,7 +145,7 @@ export namespace Computer {
   }
   /**
    * Number of ports to be open to allow porthack to run
-   * @locale 多少端口开放后允许使用 `PortHack`
+   * @localeCN 多少端口开放后允许使用 `PortHack`
    * @example
    * ```xml
    * <portsForCrack val="0" />

@@ -9,6 +9,7 @@
     "./jsx/task": "./src/components/task.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
     "./function": "./src/function.ts",
+    "./portRemap": "./src/portRemap.ts",
     "./jsx": "./jsx.ts"
   },
   "exclude": [

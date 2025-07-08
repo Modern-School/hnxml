@@ -8,8 +8,8 @@ extensions, and it is defined by `hnxml.js`. `hnxml.js` also provides
 JSX-compatible authoring support and additional generator tools for
 Hacknet-related content generating.
 
-Note: This project is currently in active development and may not yet fully
-implement all specifications.
+Note: This project is in preview and is not ready for production use. It may not
+yet fully implement all specifications.
 
 ## Hnxml Standard
 

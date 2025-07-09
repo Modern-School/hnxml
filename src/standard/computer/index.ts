@@ -1,3 +1,5 @@
+import { AllDaemons } from "./daemon.ts";
+
 /**
  * icons that computers can use.
  * @localeCN 节点可以使用的图标大全
@@ -69,6 +71,7 @@ export interface HXComputer {
    * <https://github.com/Modern-School/OpenHacknet/blob/main/Computer.cs#L51-L106>
    */
   type: "empty" | number;
+  children: void | ComputerChildren | ComputerChildren[];
 }
 export namespace Computer {
   /**
@@ -331,3 +334,21 @@ export namespace Computer {
     export type Children = note | mail | file;
   }
 }
+export type ComputerChildren =
+  | Computer.adminPass
+  | Computer.account
+  | Computer.ports
+  | Computer.portRemap
+  | Computer.proxy
+  | Computer.portsForCrack
+  | Computer.firewall
+  | Computer.trace
+  | Computer.admin
+  | Computer.dlink
+  | Computer.positionNear
+  | Computer.file
+  | Computer.customthemefile
+  | Computer.encryptedFile
+  | Computer.tracker
+  | Computer.eosDevice.root
+  | AllDaemons;

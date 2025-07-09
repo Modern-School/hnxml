@@ -287,7 +287,7 @@ export namespace Daemon {
   }
 }
 
-export type AllDaemon =
+export type AllDaemons =
   | Daemon.mailServer.root
   | Daemon.uploadServerDaemon
   | Daemon.addWebServer

@@ -52,7 +52,8 @@ export type {
 
 export type {
   Computer,
+  ComputerChildren,
   ComputerIcon,
   HXComputer,
 } from "./src/standard/computer/index.ts";
-export type { Daemon } from "./src/standard/computer/daemon.ts";
+export type { AllDaemons, Daemon } from "./src/standard/computer/daemon.ts";

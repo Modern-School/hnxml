@@ -216,8 +216,8 @@ export namespace Task {
     Filepath: string;
     SourceComp?: string;
     TargetComp?: string;
-    RequireLogsOnSource: boolean;
-    RequireSourceIntact: boolean;
+    RequireLogsOnSource?: boolean;
+    RequireSourceIntact?: boolean;
     DelayHost?: string;
     Delay?: number;
     children?: never;

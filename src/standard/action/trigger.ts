@@ -103,7 +103,7 @@ export namespace Trigger {
      *
      * @localeCN 是否需要任务完成
      */
-    needsMissionComplete: boolean;
+    needsMissionComplete?: boolean;
     children: TaskElement;
   }
 

@@ -136,7 +136,7 @@ export namespace Task {
   export interface AddIRCMessage {
     Author: string;
     TargetComp: string;
-    Delay?: string | number;
+    Delay?: number;
     children: string;
   }
 
@@ -152,7 +152,7 @@ export namespace Task {
     TargetComp: string;
     CrashSource: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -169,7 +169,7 @@ export namespace Task {
     FilePath: string;
     FileName: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -186,7 +186,7 @@ export namespace Task {
   export interface AddConditionalActions {
     Filepath: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -200,7 +200,7 @@ export namespace Task {
    */
   export interface SaveGame {
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -216,13 +216,12 @@ export namespace Task {
     Filepath: string;
     SourceComp?: string;
     TargetComp?: string;
-    RequireLogsOnSource: boolean | "true" | "false";
-    RequireSourceIntact: boolean | "true" | "false";
+    RequireLogsOnSource: boolean;
+    RequireSourceIntact: boolean;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
-
   /**
    * Flicker the player into a new theme.
    * @localeCN 在闪烁 UI 中更改 theme
@@ -233,9 +232,9 @@ export namespace Task {
    */
   export interface SwitchToTheme {
     ThemePathOrName: string;
-    FlickerInDuration: string | number;
+    FlickerInDuration: number;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -254,7 +253,7 @@ export namespace Task {
     CompleteAction: string;
     TotalDurationSeconds: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children: string;
   }
 
@@ -303,7 +302,7 @@ export namespace Task {
      */
     ExeName: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -318,7 +317,7 @@ export namespace Task {
   export interface HideNode {
     TargetComp: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -353,7 +352,7 @@ export namespace Task {
      */
     NewIP?: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -367,7 +366,7 @@ export namespace Task {
    */
   export interface HideAllNodes {
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 
@@ -382,7 +381,7 @@ export namespace Task {
   export interface ShowNode {
     Target: string;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
   /**
@@ -394,10 +393,10 @@ export namespace Task {
    */
   export interface SetLock {
     Module: "terminal" | "ram" | "netmap" | "display";
-    IsLocked: boolean | "true" | "false";
-    IsHidden: boolean | "true" | "false";
+    IsLocked: boolean;
+    IsHidden: boolean;
     DelayHost?: string;
-    Delay?: string | number;
+    Delay?: number;
     children?: never;
   }
 

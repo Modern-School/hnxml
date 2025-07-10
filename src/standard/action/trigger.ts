@@ -36,7 +36,7 @@ export namespace Trigger {
      *
      * @localeCN 是否需要任务完成
      */
-    needsMissionComplete?: "true" | "false";
+    needsMissionComplete?: boolean;
     /**
      * Require Flags "Flag1,Flag2,Flag3..."
      *
@@ -103,7 +103,7 @@ export namespace Trigger {
      *
      * @localeCN 是否需要任务完成
      */
-    needsMissionComplete: "true" | "false";
+    needsMissionComplete: boolean;
     children: TaskElement;
   }
 

@@ -143,7 +143,7 @@ export namespace Computer {
    * ```
    */
   export interface proxy {
-    time: string | number;
+    time: number;
     children?: never;
   }
   /**
@@ -155,7 +155,7 @@ export namespace Computer {
    * ```
    */
   export interface portsForCrack {
-    val: string | number;
+    val: number;
     children?: never;
   }
   /**
@@ -170,9 +170,9 @@ export namespace Computer {
    * ```
    */
   export interface firewall {
-    level: string | number;
+    level: number;
     solution: string;
-    additionalTime: string | number;
+    additionalTime: number;
     children?: never;
   }
   /**
@@ -183,7 +183,7 @@ export namespace Computer {
    * ```
    */
   export interface trace {
-    time: string | number;
+    time: number;
     children?: never;
   }
   /**
@@ -218,8 +218,8 @@ export namespace Computer {
    */
   export interface admin {
     type: "basic" | "progress" | "fase" | "none";
-    resetPassword?: "true" | "false";
-    isSuper?: "true" | "false";
+    resetPassword?: boolean;
+    isSuper?: boolean;
     children?: never;
   }
   /**
@@ -246,7 +246,7 @@ export namespace Computer {
     pisition: string;
     total: string;
     extraDistance: string;
-    force: "true" | "false";
+    force: boolean;
     children?: never;
   }
   /**
@@ -320,7 +320,7 @@ export namespace Computer {
       name: string;
       id: string;
       icon: ComputerIcon;
-      empty?: "true" | "false";
+      empty?: boolean;
       passOverride?: string;
       children: void | Children | Children[];
     }

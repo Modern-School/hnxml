@@ -8,7 +8,7 @@ export namespace Daemon {
     export interface root {
       name: string;
       color: string;
-      generateJunk: "true" | "false";
+      generateJunk: boolean;
       children: void | email | email;
     }
     export interface email {
@@ -58,8 +58,8 @@ export namespace Daemon {
     iconPath: string;
     articleFolderPath: string;
     color: string;
-    assigner: "true" | "false";
-    public: "true" | "false";
+    assigner: boolean;
+    public: boolean;
     title: string;
     children?: never;
   }
@@ -70,7 +70,7 @@ export namespace Daemon {
     themeColor: string;
     lineColor: string;
     backgroundColor: string;
-    allowAbandon: "true" | "false";
+    allowAbandon: boolean;
   }
   export interface CreditsDaemon {
     Title: string;
@@ -109,7 +109,7 @@ export namespace Daemon {
 
   export interface WhitelistAuthenticatorDaemon {
     Remote?: string;
-    SelfAuthenticating?: "true" | "false";
+    SelfAuthenticating?: boolean;
     children?: never;
   }
 
@@ -123,7 +123,7 @@ export namespace Daemon {
     export interface root {
       themeColor: string;
       name: string;
-      needsLogin: "true" | "false";
+      needsLogin: boolean;
       children: IRCDaemonChildren | IRCDaemonChildren[];
     }
     type IRCDaemonChildren = user | post;

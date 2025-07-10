@@ -4,7 +4,7 @@ import type { HXMissionEmail } from "./email.ts";
 export namespace Mission {
   export interface start {
     val: string;
-    suppress: "true" | "false";
+    suppress: boolean;
     children: string;
   }
   export interface end {
@@ -12,7 +12,7 @@ export namespace Mission {
     children: string;
   }
   export interface next {
-    IsSilent: "true" | "false";
+    IsSilent: boolean;
     children: string;
   }
   export interface branchs {
@@ -33,7 +33,7 @@ type MissionChildren =
 
 export interface HXMission {
   id: string;
-  activeCheck?: "true" | "false";
-  shouldIgnoreSenderVerification?: "true" | "false";
+  activeCheck?: boolean;
+  shouldIgnoreSenderVerification?: boolean;
   children: void | MissionChildren | MissionChildren[];
 }

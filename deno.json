@@ -8,6 +8,7 @@
     "./jsx/faction": "./src/components/faction.ts",
     "./jsx/task": "./src/components/task.ts",
     "./jsx/computer": "./src/components/computer.ts",
+    "./jsx/info": "./src/components/index.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
     "./function": "./src/function.ts",
     "./portRemap": "./src/portRemap.ts",

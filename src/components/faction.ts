@@ -4,7 +4,9 @@ import { FactionTrigger } from "../standard/faction/index.ts";
 /**
  * Faction's IntrinsicElements
  */
-export interface Elements {
+export interface FactionElements {
   CustomFaction: HXCustomFaction;
   Action: FactionTrigger;
 }
+export const CustomFaction = "CustomFaction";
+export const Action = "Action";

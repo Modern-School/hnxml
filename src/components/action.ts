@@ -4,7 +4,7 @@ import { Trigger } from "../standard/action/trigger.ts";
 /**
  * Action's IntrinsicElements
  */
-export interface Elements {
+export interface TriggerElements {
   ConditionalActions: HXConditionalActions;
   OnConnect: Trigger.OnConnect;
   HasFlays: Trigger.HasFlags;
@@ -12,3 +12,9 @@ export interface Elements {
   Instantly: Trigger.Instantly;
   OnDisconnect: Trigger.OnDisconnect;
 }
+export const ConditionalActions = "ConditionalActions";
+export const OnConnect = "OnConnect";
+export const HasFlays = "HasFlays";
+export const OnAdminGained = "OnAdminGained";
+export const Instantly = "Instantly";
+export const OnDisconnect = "OnDisconnect";

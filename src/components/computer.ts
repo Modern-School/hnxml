@@ -1,7 +1,7 @@
 import { Daemon } from "../standard/computer/daemon.ts";
 import { Computer, HXComputer } from "../standard/computer/index.ts";
 
-export interface Elements {
+export interface ComputerElements {
   Computer: HXComputer;
   adminPass: Computer.adminPass;
   account: Computer.account;
@@ -119,3 +119,52 @@ export interface Elements {
   // Notes: Daemon.DatabaseDaemon.SurveillanceProfile.Notes;
   CriminalRecord: Daemon.DatabaseDaemon.SurveillanceProfile.CriminalRecord;
 }
+
+const _Computer = "Computer";
+export { _Computer as Computer };
+
+export const MedicalDatabase = "MedicalDatabase";
+export const HeartMonitor = "HeartMonitor";
+export const PointClicker = "PointClicker";
+export const SongChangerDaemon = "SongChangerDaemon";
+export const CreditsDaemon = "CreditsDaemon";
+export const FastActionHost = "FastActionHost";
+export const CustomConnectDisplayDaemon = "CustomConnectDisplayDaemon";
+export const LogoCustomConnectDisplayDaemon = "LogoCustomConnectDisplayDaemon";
+export const WhitelistAuthenticatorDaemon = "WhitelistAuthenticatorDaemon";
+export const MarkovTextDaemon = "MarkovTextDaemon";
+export const IRCDaemon = "IRCDaemon";
+export const DatabaseDaemon = "DatabaseDaemon";
+export const GitCommitEntry = "GitCommitEntry";
+export const EntryNumber = "EntryNumber";
+export const ChangeFiles = "ChangeFiles";
+export const String = "String";
+export const Message = "Message";
+export const UserName = "UserName";
+export const SourceIP = "SourceIP";
+export const TextRecord = "TextRecord";
+export const Title = "Title";
+export const OnlineAccount = "OnlineAccount";
+export const ID = "ID";
+export const Username = "Username";
+export const BanStatus = "BanStatus";
+export const Notes = "Notes";
+export const CAROData = "CAROData";
+export const UserID = "UserID";
+export const Headshots = "Headshots";
+export const Kills = "Kills";
+export const Rank = "Rank";
+export const Crowbars = "Crowbars";
+export const InventoryID = "InventoryID";
+export const Account = "Account";
+export const Cash = "Cash";
+export const Bank = "Bank";
+export const Apartments = "Apartments";
+export const Vehicles = "Vehicles";
+export const PegasusVehicles = "PegasusVehicles";
+export const RP = "RP";
+export const SurveillanceProfile = "SurveillanceProfile";
+export const Name = "Name";
+export const Age = "Age";
+export const HomeCity = "HomeCity";
+export const CriminalRecord = "CriminalRecord";

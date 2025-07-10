@@ -1,6 +1,6 @@
 {
   "name": "@modernschoolproject/hnxml",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "exports": {
     ".": "./index.ts",
     "./jsx/mission": "./src/components/mission.ts",
@@ -8,7 +8,7 @@
     "./jsx/faction": "./src/components/faction.ts",
     "./jsx/task": "./src/components/task.ts",
     "./jsx/computer": "./src/components/computer.ts",
-    "./jsx/info": "./src/components/index.ts",
+    "./jsx/info": "./src/components/info.ts",
     "./jsx-runtime": "./jsx-runtime.ts",
     "./function": "./src/function.ts",
     "./portRemap": "./src/portRemap.ts",

@@ -22,7 +22,7 @@
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",
     "jsx-xml": "npm:jsx-xml@^0.3.0",
-    "typedoc": "npm:typedoc@^0.28.5"
+    "typedoc": "npm:typedoc@^0.28.7"
   },
   "fmt": {
     "indentWidth": 2

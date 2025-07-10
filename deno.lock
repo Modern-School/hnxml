@@ -4,8 +4,7 @@
     "jsr:@std/assert@^1.0.13": "1.0.13",
     "jsr:@std/internal@^1.0.6": "1.0.8",
     "npm:jsx-xml@0.3": "0.3.0",
-    "npm:typedoc@*": "0.28.5_typescript@5.8.3",
-    "npm:typedoc@~0.28.5": "0.28.5_typescript@5.8.3"
+    "npm:typedoc@~0.28.7": "0.28.7_typescript@5.8.3"
   },
   "jsr": {
     "@std/assert@1.0.13": {
@@ -19,8 +18,8 @@
     }
   },
   "npm": {
-    "@gerrit0/mini-shiki@3.6.0": {
-      "integrity": "sha512-KaeJvPNofTEZR9EzVNp/GQzbQqkGfjiu6k3CXKvhVTX+8OoAKSX/k7qxLKOX3B0yh2XqVAc93rsOu48CGt2Qug==",
+    "@gerrit0/mini-shiki@3.7.0": {
+      "integrity": "sha512-7iY9wg4FWXmeoFJpUL2u+tsmh0d0jcEJHAIzVxl3TG4KL493JNnisdLAILZ77zcD+z3J0keEXZ+lFzUgzQzPDg==",
       "dependencies": [
         "@shikijs/engine-oniguruma",
         "@shikijs/langs",
@@ -28,7 +27,7 @@
         "@shikijs/types",
         "@shikijs/vscode-textmate"
       ],
-      "tarball": "https://registry.npmmirror.com/@gerrit0/mini-shiki/-/mini-shiki-3.6.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@gerrit0/mini-shiki/-/mini-shiki-3.7.0.tgz"
     },
     "@oozcitak/dom@1.15.10": {
       "integrity": "sha512-0JT29/LaxVgRcGKvHmSrUTEvZ8BXvZhGl2LASRUgHqDTC1M5g1pLmVv56IYNyt3bG2CUjDkc67wnyZC14pbQrQ==",
@@ -198,8 +197,8 @@
       "integrity": "sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==",
       "tarball": "https://registry.npmmirror.com/sprintf-js/-/sprintf-js-1.0.3.tgz"
     },
-    "typedoc@0.28.5_typescript@5.8.3": {
-      "integrity": "sha512-5PzUddaA9FbaarUzIsEc4wNXCiO4Ot3bJNeMF2qKpYlTmM9TTaSHQ7162w756ERCkXER/+o2purRG6YOAv6EMA==",
+    "typedoc@0.28.7_typescript@5.8.3": {
+      "integrity": "sha512-lpz0Oxl6aidFkmS90VQDQjk/Qf2iw0IUvFqirdONBdj7jPSN9mGXhy66BcGNDxx5ZMyKKiBVAREvPEzT6Uxipw==",
       "dependencies": [
         "@gerrit0/mini-shiki",
         "lunr",
@@ -209,7 +208,7 @@
         "yaml"
       ],
       "bin": true,
-      "tarball": "https://registry.npmmirror.com/typedoc/-/typedoc-0.28.5.tgz"
+      "tarball": "https://registry.npmmirror.com/typedoc/-/typedoc-0.28.7.tgz"
     },
     "typescript@5.8.3": {
       "integrity": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==",
@@ -240,7 +239,7 @@
     "dependencies": [
       "jsr:@std/assert@^1.0.13",
       "npm:jsx-xml@0.3",
-      "npm:typedoc@~0.28.5"
+      "npm:typedoc@~0.28.7"
     ]
   }
 }

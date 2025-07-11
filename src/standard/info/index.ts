@@ -58,7 +58,7 @@ export namespace HacknetExtension {
     children: string;
   }
   export interface AllowSaves {
-    children: boolean;
+    children: "true" | "false";
   }
   export interface StartingVisibleNodes {
     children: string;
@@ -81,10 +81,10 @@ export namespace HacknetExtension {
     children: string;
   }
   export interface StartsWithTutorial {
-    children: boolean;
+    children: "true" | "false";
   }
   export interface HasIntroStartup {
-    children: boolean;
+    children: "true" | "false";
   }
   /**
    * Custom Theme path or Base Themes' names

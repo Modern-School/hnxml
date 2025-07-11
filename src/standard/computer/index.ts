@@ -22,7 +22,7 @@ export type ComputerIcon =
 export interface HXComputer {
   id: string;
   name: string;
-  ip: string;
+  ip?: string;
   /**
    * Security is a number from 0 to 5 that represents how hard it is to hack
    * From 1-4 it will need that many ports to open, 4 and above will automatically
@@ -39,14 +39,14 @@ export interface HXComputer {
    *
    * 参考：<https://github.com/Modern-School/OpenHacknet/blob/main/Computer.cs#L109-L140>
    */
-  security: string;
+  security?: string;
   /**
    * AllowsDefaultBootModule is default to true and means that when you connect to a node
    * it will automatically launch it's program (the last daemon defined in this file) and
    * put it up on the display module.
    * @localeCN AllowsDefaultBootModule 默认为 true，意味着当你连接到一个节点时，它会自动打开节点中定义的最后一个守护进程页面，并将其显示在 `display` 上。
    */
-  allowsDefaultBootModule: string;
+  allowsDefaultBootModule?: boolean;
   /**
    * icon:  not including this uses the default set by security level:
    * laptop, chip, kellis, tablet, ePhone, ePhone2
@@ -55,7 +55,7 @@ export interface HXComputer {
    * Psylance, PacificAir, Alchemist, DLCLaptop, DLCPC1, DLCPC2, DLCServer
    * @localeCN 没主动声明的话会根据安全等级设置图标。
    */
-  icon: ComputerIcon;
+  icon?: ComputerIcon;
   /**
    * for the type flag:  1=  corporate, 2 = Home, 3 = server 4 = empty
    *
@@ -70,7 +70,7 @@ export interface HXComputer {
    * 参考：<https://github.com/Modern-School/OpenHacknet/blob/main/ComputerLoader.cs#L73-L81>
    * <https://github.com/Modern-School/OpenHacknet/blob/main/Computer.cs#L51-L106>
    */
-  type: "empty" | number;
+  type?: "empty" | number;
   children: void | ComputerChildren | ComputerChildren[];
 }
 export namespace Computer {

@@ -103,7 +103,7 @@ export namespace HacknetExtension {
     children: string;
   }
   export interface SequencerSpinUpTime {
-    children: number;
+    children: string;
   }
   export interface SequencerFlagRequiredForStart {
     children: string;
@@ -118,13 +118,8 @@ export namespace HacknetExtension {
   export interface WorkshopLanguage {
     children: string;
   }
-  export enum Visibility {
-    public,
-    friends_only,
-    private,
-  }
   export interface WorkshopVisibility {
-    children: Visibility;
+    children: "0" | "1" | "2";
   }
   export interface WorkshopTags {
     children: string;

@@ -8,6 +8,7 @@ export class HackerScript {
     this.scripts.push(`${str} ${this.enter}`);
   }
   public end(): string {
+    this.scripts.push("");
     return this.scripts.join("\n");
   }
   public config(target: string, source: string, basedelay: number): this {

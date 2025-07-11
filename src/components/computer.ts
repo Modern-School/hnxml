@@ -1,5 +1,6 @@
 import { Daemon } from "../standard/computer/daemon.ts";
 import { Computer, HXComputer } from "../standard/computer/index.ts";
+import { HXMissionEmail } from "../standard/mission/email.ts";
 
 export interface ComputerElements {
   Computer: HXComputer;
@@ -24,7 +25,7 @@ export interface ComputerElements {
   mail: Computer.eosDevice.mail;
 
   mailServer: Daemon.mailServer.root;
-  email: Daemon.mailServer.email;
+  email: HXMissionEmail | Daemon.mailServer.email;
 
   uploadServerDaemon: Daemon.uploadServerDaemon;
   addWebServer: Daemon.addWebServer;

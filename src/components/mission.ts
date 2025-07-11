@@ -1,6 +1,7 @@
 import { HXMission, Mission } from "../standard/mission/index.ts";
 import { HXMissionEmail, MissionEmail } from "../standard/mission/email.ts";
 import { HXGoal, HXGoals } from "../standard/mission/goals.ts";
+import { Daemon } from "../standard/computer/daemon.ts";
 
 /**
  * Mission's IntrinsicElements
@@ -14,7 +15,7 @@ export interface MissionElements {
   nextMission: Mission.next;
   branchMissions: Mission.branchs;
   branch: Mission.branch;
-  email: HXMissionEmail;
+  email: HXMissionEmail | Daemon.mailServer.email;
   sender: MissionEmail.sender;
   subject: MissionEmail.subject;
   body: MissionEmail.body;

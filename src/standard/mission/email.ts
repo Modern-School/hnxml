@@ -1,19 +1,22 @@
 export interface HXMissionEmail {
-  children: [
-    MissionEmail.sender,
-    MissionEmail.subject,
-    MissionEmail.body,
-    MissionEmail.attachments,
-  ];
+  children: MissionEmailChildren | MissionEmailChildren[];
 }
+export type MissionEmailChildren =
+  | MissionEmail.sender
+  | MissionEmail.subject
+  | MissionEmail.body
+  | MissionEmail.attachments;
 
 export namespace MissionEmail {
   export type sender = { children: string };
   export type subject = { children: string };
   export type body = { children: string };
-  type attachmentsChildren = sender | subject | body;
+  type AttachmentsChildren =
+    | Attachment.note
+    | Attachment.link
+    | Attachment.account;
   export interface attachments {
-    children: void | attachmentsChildren | attachmentsChildren[];
+    children: void | AttachmentsChildren | AttachmentsChildren[];
   }
   export namespace Attachment {
     export interface note {

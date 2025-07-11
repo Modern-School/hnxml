@@ -17,7 +17,8 @@
   },
   "exclude": [
     "./typedoc.config.json",
-    "./docs.md"
+    "./docs.md",
+    "./.github/"
   ],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",

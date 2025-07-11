@@ -269,7 +269,7 @@ export namespace Computer {
     path: string;
     name: string;
     themePath: string;
-    childre: void | string;
+    children: void | string;
   }
   /**
    * This generates an encrypted file that can be decrypted using `Decypher.exe`

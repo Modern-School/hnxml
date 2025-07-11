@@ -2,9 +2,9 @@ interface HXGoals {
   /**
    * 必须显式声明 children 才能禁止自闭和写法 `<goals/>`
    *
-   * 若内容为空，要求书写jsx时使用 `<goals>{undefined}<goals>`
+   * 若内容为空，要求书写jsx时使用 `<goals>{" " as const}<goals>`
    */
-  children: void | HXGoal | HXGoal[];
+  children: " " | HXGoal | HXGoal[];
   key?: never;
 }
 

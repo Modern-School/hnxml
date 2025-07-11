@@ -71,7 +71,7 @@ export interface HXComputer {
    * <https://github.com/Modern-School/OpenHacknet/blob/main/Computer.cs#L51-L106>
    */
   type?: "empty" | number;
-  children: void | ComputerChildren | ComputerChildren[];
+  children: " " | ComputerChildren | ComputerChildren[];
 }
 export namespace Computer {
   /**
@@ -255,7 +255,7 @@ export namespace Computer {
   export interface file {
     path: string;
     name: string;
-    children: void | string;
+    children: " " | string;
   }
   /**
    * Creates a file for custom theme in a node.
@@ -322,9 +322,9 @@ export namespace Computer {
       icon: ComputerIcon;
       empty?: boolean;
       passOverride?: string;
-      children: void | Children | Children[];
+      children: " " | Children | Children[];
     }
-    export type note = { children: void | string };
+    export type note = { children: " " | string };
     export interface mail {
       username: string;
       pass: string;

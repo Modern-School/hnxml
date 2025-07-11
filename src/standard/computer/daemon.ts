@@ -9,13 +9,13 @@ export namespace Daemon {
       name: string;
       color: string;
       generateJunk: boolean;
-      children: void | email | email;
+      children: " " | email | email;
     }
     export interface email {
       recipient: string;
       sender: string;
       subject: string;
-      children: void | string;
+      children: " " | string;
     }
   }
   export interface uploadServerDaemon {
@@ -42,7 +42,7 @@ export namespace Daemon {
   export namespace messageBoard {
     export interface root {
       name: string;
-      children: void | thread | thread[];
+      children: " " | thread | thread[];
     }
     export type thread = { children: string };
   }
@@ -134,7 +134,7 @@ export namespace Daemon {
     }
     export interface post {
       user: string;
-      children: void | string;
+      children: " " | string;
     }
   }
   export namespace DatabaseDaemon {

@@ -22,5 +22,5 @@ export interface HXConditionalActions {
    * @localeCN `<ConditionalActions>` 的子元素是所有种类的 Trigger
    * @see {@link Trigger}, {@link AllTriggers}
    */
-  children: void | AllTriggers | AllTriggers[];
+  children: " " | AllTriggers | AllTriggers[];
 }

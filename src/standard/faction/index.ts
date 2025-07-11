@@ -4,11 +4,11 @@ export interface HXCustomFaction {
   name: string;
   id: string;
   playerVal: string;
-  children: void | FactionTrigger | FactionTrigger[];
+  children: " " | FactionTrigger | FactionTrigger[];
 }
 
 export interface FactionTrigger {
   ValueRequired?: string;
   Flags?: string;
-  children: void | AllTasks | AllTasks[];
+  children: " " | AllTasks | AllTasks[];
 }

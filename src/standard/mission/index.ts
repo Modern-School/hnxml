@@ -16,7 +16,7 @@ export namespace Mission {
     children: string;
   }
   export interface branchs {
-    children: void | branch | branch[];
+    children: " " | branch | branch[];
   }
   export interface branch {
     children: string;
@@ -35,5 +35,5 @@ export interface HXMission {
   id: string;
   activeCheck?: boolean;
   shouldIgnoreSenderVerification?: boolean;
-  children: void | MissionChildren | MissionChildren[];
+  children: " " | MissionChildren | MissionChildren[];
 }

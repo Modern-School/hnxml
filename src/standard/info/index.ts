@@ -20,7 +20,7 @@ export namespace HacknetExtension {
     | WorkshopPublishID;
 
   export interface root {
-    children: void | AllInfos | AllInfos[];
+    children: " " | AllInfos | AllInfos[];
   }
 
   /**

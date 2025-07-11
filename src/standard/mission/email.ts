@@ -16,7 +16,7 @@ export namespace MissionEmail {
     | Attachment.link
     | Attachment.account;
   export interface attachments {
-    children: void | AttachmentsChildren | AttachmentsChildren[];
+    children: " " | AttachmentsChildren | AttachmentsChildren[];
   }
   export namespace Attachment {
     export interface note {

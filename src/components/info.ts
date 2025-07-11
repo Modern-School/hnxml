@@ -10,6 +10,7 @@ export interface InfoElements {
   AllowSaves: HacknetExtension.AllowSaves;
   StartingVisibleNodes: HacknetExtension.StartingVisibleNodes;
   StartingMission: HacknetExtension.StartingMission;
+  StartingActions: HacknetExtension.StartingActions;
   Description: HacknetExtension.Description;
   Faction: HacknetExtension.Faction;
   StartsWithTutorial: HacknetExtension.StartsWithTutorial;
@@ -35,6 +36,7 @@ export const Name = "Name";
 export const AllowSaves = "AllowSaves";
 export const StartingVisibleNodes = "StartingVisibleNodes";
 export const StartingMission = "StartingMission";
+export const StartingActions = "StartingActions";
 export const Description = "Description";
 export const Faction = "Faction";
 export const StartsWithTutorial = "StartsWithTutorial";

@@ -5,7 +5,7 @@ import { HXGoal, HXGoals } from "../standard/mission/goals.ts";
 /**
  * Mission's IntrinsicElements
  */
-export interface Elements {
+export interface MissionElements {
   mission: HXMission;
   goals: HXGoals;
   goal: HXGoal;

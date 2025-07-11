@@ -1,6 +1,6 @@
 {
   "name": "@modernschoolproject/hnxml",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "exports": {
     ".": "./index.ts",
     "./jsx/mission": "./src/components/mission.ts",

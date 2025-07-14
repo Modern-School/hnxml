@@ -4,12 +4,14 @@
 [![Github Badge](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
 
 Hnxml Standard is a TypeScript-based XML schema specification for Hacknet
-extensions, and it is defined by `hnxml.js`. `hnxml.js` also provides
-JSX-compatible authoring support and additional generator tools for
+extensions, and it is defined by `hnxml.js`. `hnxml.js` provides JSX/TSX
+compatible authoring support with types and additional generator tools for
 Hacknet-related content generating.
 
 Note: This project is in preview and is not ready for production use. It may not
 yet fully implement all specifications.
+
+Example: [PCS-OS](https://github.com/FBIKdot/PCS-OS)
 
 ## Hnxml Standard
 
@@ -19,9 +21,9 @@ You can access Hnxml Standard through:
   [hnxml.js.org](https://hnxml.js.org)
 - Source code: [GitHub Repository](https://github.com/xxx/hnxml)
 
-## Use `hnxml.js` with JSX
+## Use `hnxml.js` with TSX
 
-Add package `@modernschoolproject/hnxml` via deno
+Add package `@modernschoolproject/hnxml`
 
 ```bash
 # deno 
@@ -62,7 +64,7 @@ Edit `compilerOptions` in `tsconfig.json` or `deno.json`
 Then declare `JSX.IntrinsicElements` for the Hacknet Extension XML types you
 want to generate.
 
-For example, if you want to use `Mission`:
+For example, if you want to use `Mission` and `Actions`:
 
 ```ts
 import { render } from "@modernschoolproject/hnxml";
@@ -70,7 +72,9 @@ import { render } from "@modernschoolproject/hnxml";
 declare module "@modernschoolproject/hnxml/jsx-runtime" {
   namespace JSX {
     type IntrinsicElements =
-      import("@modernschoolproject/hnxml/jsx/mission").Elements;
+      & import("@modernschoolproject/hnxml/jsx/mission").MissionElements
+      & import("@modernschoolproject/hnxml/jsx/action").TriggerElements
+      & import("@modernschoolproject/hnxml/jsx/task").TaskElements;
   }
 }
 

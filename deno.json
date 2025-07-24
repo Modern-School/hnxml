@@ -30,8 +30,8 @@
   },
   "tasks": {
     "docs": "deno task docs:std && deno task docs:api",
-    "docs:api": "deno run --allow-read --allow-env --allow-run npm:typedoc src/function.ts src/portRemap.ts jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
-    "docs:std": "deno run --allow-read --allow-env --allow-run npm:typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme docs.md --name 'Hnxml Standard'"
+    "docs:api": "deno run --allow-read --allow-env --allow-run typedoc src/function.ts src/portRemap.ts jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
+    "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme docs.md --name 'Hnxml Standard'"
   },
   "nodeModulesDir": "none"
 }

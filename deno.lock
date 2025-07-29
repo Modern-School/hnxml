@@ -2,9 +2,9 @@
   "version": "5",
   "specifiers": {
     "jsr:@std/assert@^1.0.13": "1.0.13",
-    "jsr:@std/internal@^1.0.6": "1.0.8",
+    "jsr:@std/internal@^1.0.6": "1.0.10",
     "npm:jsx-xml@0.3": "0.3.0",
-    "npm:typedoc@~0.28.7": "0.28.7_typescript@5.8.3"
+    "npm:typedoc@~0.28.7": "0.28.8_typescript@5.8.3"
   },
   "jsr": {
     "@std/assert@1.0.13": {
@@ -13,13 +13,13 @@
         "jsr:@std/internal"
       ]
     },
-    "@std/internal@1.0.8": {
-      "integrity": "fc66e846d8d38a47cffd274d80d2ca3f0de71040f855783724bb6b87f60891f5"
+    "@std/internal@1.0.10": {
+      "integrity": "e3be62ce42cab0e177c27698e5d9800122f67b766a0bea6ca4867886cbde8cf7"
     }
   },
   "npm": {
-    "@gerrit0/mini-shiki@3.7.0": {
-      "integrity": "sha512-7iY9wg4FWXmeoFJpUL2u+tsmh0d0jcEJHAIzVxl3TG4KL493JNnisdLAILZ77zcD+z3J0keEXZ+lFzUgzQzPDg==",
+    "@gerrit0/mini-shiki@3.8.1": {
+      "integrity": "sha512-HVZW+8pxoOExr5ZMPK15U79jQAZTO/S6i5byQyyZGjtNj+qaYd82cizTncwFzTQgiLo8uUBym6vh+/1tfJklTw==",
       "dependencies": [
         "@shikijs/engine-oniguruma",
         "@shikijs/langs",
@@ -27,7 +27,7 @@
         "@shikijs/types",
         "@shikijs/vscode-textmate"
       ],
-      "tarball": "https://registry.npmmirror.com/@gerrit0/mini-shiki/-/mini-shiki-3.7.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@gerrit0/mini-shiki/-/mini-shiki-3.8.1.tgz"
     },
     "@oozcitak/dom@1.15.10": {
       "integrity": "sha512-0JT29/LaxVgRcGKvHmSrUTEvZ8BXvZhGl2LASRUgHqDTC1M5g1pLmVv56IYNyt3bG2CUjDkc67wnyZC14pbQrQ==",
@@ -57,35 +57,35 @@
       "integrity": "sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==",
       "tarball": "https://registry.npmmirror.com/@oozcitak/util/-/util-8.3.8.tgz"
     },
-    "@shikijs/engine-oniguruma@3.7.0": {
-      "integrity": "sha512-5BxcD6LjVWsGu4xyaBC5bu8LdNgPCVBnAkWTtOCs/CZxcB22L8rcoWfv7Hh/3WooVjBZmFtyxhgvkQFedPGnFw==",
+    "@shikijs/engine-oniguruma@3.8.1": {
+      "integrity": "sha512-KGQJZHlNY7c656qPFEQpIoqOuC4LrxjyNndRdzk5WKB/Ie87+NJCF1xo9KkOUxwxylk7rT6nhlZyTGTC4fCe1g==",
       "dependencies": [
         "@shikijs/types",
         "@shikijs/vscode-textmate"
       ],
-      "tarball": "https://registry.npmmirror.com/@shikijs/engine-oniguruma/-/engine-oniguruma-3.7.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@shikijs/engine-oniguruma/-/engine-oniguruma-3.8.1.tgz"
     },
-    "@shikijs/langs@3.7.0": {
-      "integrity": "sha512-1zYtdfXLr9xDKLTGy5kb7O0zDQsxXiIsw1iIBcNOO8Yi5/Y1qDbJ+0VsFoqTlzdmneO8Ij35g7QKF8kcLyznCQ==",
+    "@shikijs/langs@3.8.1": {
+      "integrity": "sha512-TjOFg2Wp1w07oKnXjs0AUMb4kJvujML+fJ1C5cmEj45lhjbUXtziT1x2bPQb9Db6kmPhkG5NI2tgYW1/DzhUuQ==",
       "dependencies": [
         "@shikijs/types"
       ],
-      "tarball": "https://registry.npmmirror.com/@shikijs/langs/-/langs-3.7.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@shikijs/langs/-/langs-3.8.1.tgz"
     },
-    "@shikijs/themes@3.7.0": {
-      "integrity": "sha512-VJx8497iZPy5zLiiCTSIaOChIcKQwR0FebwE9S3rcN0+J/GTWwQ1v/bqhTbpbY3zybPKeO8wdammqkpXc4NVjQ==",
+    "@shikijs/themes@3.8.1": {
+      "integrity": "sha512-Vu3t3BBLifc0GB0UPg2Pox1naTemrrvyZv2lkiSw3QayVV60me1ujFQwPZGgUTmwXl1yhCPW8Lieesm0CYruLQ==",
       "dependencies": [
         "@shikijs/types"
       ],
-      "tarball": "https://registry.npmmirror.com/@shikijs/themes/-/themes-3.7.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@shikijs/themes/-/themes-3.8.1.tgz"
     },
-    "@shikijs/types@3.7.0": {
-      "integrity": "sha512-MGaLeaRlSWpnP0XSAum3kP3a8vtcTsITqoEPYdt3lQG3YCdQH4DnEhodkYcNMcU0uW0RffhoD1O3e0vG5eSBBg==",
+    "@shikijs/types@3.8.1": {
+      "integrity": "sha512-5C39Q8/8r1I26suLh+5TPk1DTrbY/kn3IdWA5HdizR0FhlhD05zx5nKCqhzSfDHH3p4S0ZefxWd77DLV+8FhGg==",
       "dependencies": [
         "@shikijs/vscode-textmate",
         "@types/hast"
       ],
-      "tarball": "https://registry.npmmirror.com/@shikijs/types/-/types-3.7.0.tgz"
+      "tarball": "https://registry.npmmirror.com/@shikijs/types/-/types-3.8.1.tgz"
     },
     "@shikijs/vscode-textmate@10.0.2": {
       "integrity": "sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==",
@@ -197,8 +197,8 @@
       "integrity": "sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==",
       "tarball": "https://registry.npmmirror.com/sprintf-js/-/sprintf-js-1.0.3.tgz"
     },
-    "typedoc@0.28.7_typescript@5.8.3": {
-      "integrity": "sha512-lpz0Oxl6aidFkmS90VQDQjk/Qf2iw0IUvFqirdONBdj7jPSN9mGXhy66BcGNDxx5ZMyKKiBVAREvPEzT6Uxipw==",
+    "typedoc@0.28.8_typescript@5.8.3": {
+      "integrity": "sha512-16GfLopc8icHfdvqZDqdGBoS2AieIRP2rpf9mU+MgN+gGLyEQvAO0QgOa6NJ5QNmQi0LFrDY9in4F2fUNKgJKA==",
       "dependencies": [
         "@gerrit0/mini-shiki",
         "lunr",
@@ -208,7 +208,7 @@
         "yaml"
       ],
       "bin": true,
-      "tarball": "https://registry.npmmirror.com/typedoc/-/typedoc-0.28.7.tgz"
+      "tarball": "https://registry.npmmirror.com/typedoc/-/typedoc-0.28.8.tgz"
     },
     "typescript@5.8.3": {
       "integrity": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==",

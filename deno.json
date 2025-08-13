@@ -18,7 +18,8 @@
   "exclude": [
     "./typedoc.config.json",
     "./docs.md",
-    "./.github/"
+    "./.github/",
+    "./scripts/"
   ],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",
@@ -28,10 +29,15 @@
   "fmt": {
     "indentWidth": 2
   },
+  "unstable": ["raw-imports"],
   "tasks": {
     "docs": "deno task docs:std && deno task docs:api",
     "docs:api": "deno run --allow-read --allow-env --allow-run typedoc src/function.ts src/portRemap.ts jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
-    "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme docs.md --name 'Hnxml Standard'"
+    "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme docs.md --name 'Hnxml Standard'",
+    "fmt": "deno fmt",
+    "release": "deno task fmt && deno task changelog && deno task updateDenoJson",
+    "changelog": "deno run -A changelogen --release --no-commit --no-tag",
+    "updateDenoJson": "deno run -RW scripts/publish.ts"
   },
   "nodeModulesDir": "none"
 }

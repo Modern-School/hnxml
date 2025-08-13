@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.7.2
+
+Noting meaningful. Just another [changelogen](https://unjs.io/packages/changelogen) test.
+
+[compare changes](https://github.com/Modern-School/hnxml/compare/v0.7.1...v0.7.2)
+
+### 📖 Documentation
+
+- **readme:** Update readme ([f98b74c](https://github.com/Modern-School/hnxml/commit/f98b74c))
+- **hnstd:** Update and rename: docs.md -> hnstd.md ([476b7ab](https://github.com/Modern-School/hnxml/commit/476b7ab))
+
+### 📦 Build
+
+- Now manage dependencies in package.json ([e8a8174](https://github.com/Modern-School/hnxml/commit/e8a8174))
+
+### 🏡 Chore
+
+- Deno fmt and jsr now ignore CHANGELOG.md ([a09052f](https://github.com/Modern-School/hnxml/commit/a09052f))
+- Changelog use --bump instead of --release ([429f886](https://github.com/Modern-School/hnxml/commit/429f886))
+
+### ❤️ Contributors
+
+- FBIKdot ([@FBIKdot](https://github.com/FBIKdot))
+
 ## v0.7.1
 
 Start to use [changelogen](https://unjs.io/packages/changelogen) to generate

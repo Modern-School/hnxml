@@ -19,7 +19,8 @@
     "./typedoc.config.json",
     "./docs.md",
     "./.github/",
-    "./scripts/"
+    "./scripts/",
+    "./CHANGELOG.md"
   ],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.13",
@@ -27,7 +28,8 @@
     "typedoc": "npm:typedoc@^0.28.7"
   },
   "fmt": {
-    "indentWidth": 2
+    "indentWidth": 2,
+    "exclude": ["./CHANGELOG.md"]
   },
   "unstable": ["raw-imports"],
   "tasks": {

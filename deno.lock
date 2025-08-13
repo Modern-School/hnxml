@@ -469,14 +469,10 @@
     }
   },
   "workspace": {
-    "dependencies": [
-      "jsr:@std/assert@^1.0.13",
-      "npm:jsx-xml@0.3",
-      "npm:typedoc@~0.28.7"
-    ],
     "packageJson": {
       "dependencies": [
         "npm:changelogen@~0.6.2",
+        "npm:jsx-xml@0.3",
         "npm:typedoc@~0.28.10"
       ]
     }

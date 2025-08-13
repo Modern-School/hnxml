@@ -1,5 +1,8 @@
 {
   "version": "0.7.1",
+  "dependencies": {
+    "jsx-xml": "^0.3.0"
+  },
   "devDependencies": {
     "changelogen": "^0.6.2",
     "typedoc": "^0.28.10"

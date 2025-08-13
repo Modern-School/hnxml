@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.7.1",
   "devDependencies": {
     "changelogen": "^0.6.2",
     "typedoc": "^0.28.10"

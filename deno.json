@@ -1,6 +1,6 @@
 {
   "name": "@modernschoolproject/hnxml",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "exports": {
     ".": "./index.ts",
     "./jsx/mission": "./src/components/mission.ts",
@@ -35,7 +35,7 @@
     "docs:api": "deno run --allow-read --allow-env --allow-run typedoc src/function.ts src/portRemap.ts jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
     "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme docs.md --name 'Hnxml Standard'",
     "fmt": "deno fmt",
-    "release": "deno task fmt && deno task changelog && deno task updateDenoJson",
+    "release": "deno task fmt && deno task changelog && deno task updateDenoJson && deno task fmt",
     "changelog": "pnpx changelogen --release --no-commit --no-tag",
     "updateDenoJson": "deno run -RW scripts/publish.ts",
     "publish": "pnpx changelogen gh release"

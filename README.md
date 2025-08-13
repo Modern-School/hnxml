@@ -12,7 +12,7 @@ Hacknet-related content generating.
 
 > [!WARNING]\
 > Note: This project is in heavy development and is not ready for production
-> use. It does not yet fully implement all specifications.
+> use.
 
 Example: [PCS-OS](https://github.com/FBIKdot/PCS-OS)
 

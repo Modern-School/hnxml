@@ -3,8 +3,12 @@
 [![JSR Badge](https://jsr.io/badges/@modernschoolproject/hnxml)](https://jsr.io/@modernschoolproject/hnxml)
 [![Github Badge](https://img.shields.io/badge/Github-hnxml-black?logo=github)](https://github.com/Modern-School/hnxml)
 
-Hnxml Standard (hnstd) is a TypeScript-based XML schema specification for
-Hacknet extensions, and it is defined by the source code of `hnxml.js`.
+> [!WARNING]\
+> Note: This project is in heavy development and is not ready for production
+> use.
+
+Hnxml Standard is a TypeScript-based XML schema specification for Hacknet
+Extension, and it is defined by `hnxml.js`.
 
 The homepage of this site is Hnxml Standard. You can access hnxml.js API Docs
 through [hnxml.js API Docs](https://hnxml.js.org/api).

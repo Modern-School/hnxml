@@ -34,9 +34,9 @@
     "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme hnstd.md --name 'Hnxml Standard'",
     "fmt": "deno fmt",
     "release": "deno task fmt && deno publish --dry-run && deno task changelog && deno task updateDenoJson && deno task fmt",
-    "changelog": "pnpx changelogen --bump",
+    "changelog": "pnpx changelogen@latest --bump",
     "updateDenoJson": "deno run -RW scripts/publish.ts",
-    "publish": "pnpx changelogen gh release"
+    "publish": "pnpx changelogen@latest gh release"
   },
   "nodeModulesDir": "none"
 }

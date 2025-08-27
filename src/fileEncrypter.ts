@@ -1,7 +1,7 @@
 /**
  * 模拟 Windows 下 x86 .net framwork 4.0 中 String.GetHashCode 的实现
  */
-export function getHashCode(str: string) {
+export function getHashCode(str: string): number {
   let num = 352654597 | 0;
   let num2 = num;
 

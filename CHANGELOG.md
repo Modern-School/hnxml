@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.7.3
+
+添加了判断某个字符串作为 Windows 下 原版 Hacknet Extension 的 `<encryptedFile>` 的密码时会不会与空密码发生碰撞的函数。
+
+[compare changes](https://github.com/Modern-School/hnxml/compare/v0.7.2...v0.7.3)
+
+### 🚀 Enhancements
+
+- HashCollisionCheck for encryptedFile ([e167060](https://github.com/Modern-School/hnxml/commit/e167060))
+
+### ❤️ Contributors
+
+- FBIKdot ([@FBIKdot](https://github.com/FBIKdot))
+
 ## v0.7.2
 
 Noting meaningful. Just another [changelogen](https://unjs.io/packages/changelogen) test.

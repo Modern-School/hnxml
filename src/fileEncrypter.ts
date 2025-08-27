@@ -1,5 +1,13 @@
 /**
- * 模拟 Windows 下 x86 .net framwork 4.0 中 String.GetHashCode 的实现
+ * 这个 module 负责与 Hacknet 中 FileEncrypter 有关的工具。
+ * 主要是无效密码检测，和它所依赖的 .NET Framwork 4.0 `String.GetHashCode` 的 TypeScript 实现。
+ * @module
+ */
+
+/**
+ * 模拟 Windows 下 x86 .NET Framwork 4.0 中 `String.GetHashCode` 的实现。
+ *
+ * @link https://github.com/microsoft/referencesource/blob/main/mscorlib/system/string.cs#L829-L892
  */
 export function getHashCode(str: string): number {
   let num = 352654597;
@@ -43,7 +51,11 @@ export const int2Ushort = (num: number) => num & 0xFFFF;
 
 /**
  * 检测该字符串拿去用于 `<encryptedFile>` 的 pass 的话，
- * 玩家在 Windows 版本的原版 Hacknet 会不会可以不需要密码来解密文件
+ * 玩家在 Windows 版本的原版 Hacknet 会不会可以不需要密码来解密文件。
+ *
+ * 据 Hacknet discord 几位大佬所说，MacOS/Linux 版本的 Hacknet 使用的 Mono 的 `String.GetHashCode` 的实现不一样。
+ * 所以只能拿来测 Windows 版本 Hacknet 下是否会发生碰撞，不能用于检测 MacOS/Linux 版本的 Hacknet。
+ * @see {@link getHashCode}
  */
 export const hashCollisionCheck = (pass: string): boolean =>
   ~~(int2Ushort(getHashCode(pass)) / 1822) === 3;

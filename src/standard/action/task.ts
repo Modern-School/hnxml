@@ -239,7 +239,7 @@ export namespace Task {
    */
   export interface SwitchToTheme {
     ThemePathOrName: string;
-    FlickerInDuration: number;
+    FlickerInDuration?: number;
     DelayHost?: string;
     Delay?: number;
     children?: never;

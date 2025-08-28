@@ -1,4 +1,5 @@
-import { AllTriggers as AllTriggers } from "./trigger.ts";
+import { AllTriggers } from "./trigger.ts";
+import { Trigger } from "./trigger.ts";
 
 /**
  * `<ConditionalActions>` is the root element of Actions.
@@ -15,7 +16,7 @@ import { AllTriggers as AllTriggers } from "./trigger.ts";
  * `<ConditionalActions>` 是 Actions 的根元素。 `<ConditionalActions>` 的子元素是 Trigger。
  * @see {@link Trigger}, {@link AllTriggers}
  */
-export interface HXConditionalActions {
+export interface ConditionalActionsElement {
   /**
    * Child Elements of `<ConditionalActions>` are all types of Trigger
    *

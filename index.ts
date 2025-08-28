@@ -30,7 +30,7 @@
  * For example: {@link Trigger.HasFlags} {@link Computer.tracker}
  * @module
  */
-export type { HXConditionalActions } from "./src/standard/action/index.ts";
+export type { ConditionalActionsElement } from "./src/standard/action/index.ts";
 export type { AllTriggers, Trigger } from "./src/standard/action/trigger.ts";
 export type {
   AllTasks,

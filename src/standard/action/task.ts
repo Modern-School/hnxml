@@ -70,6 +70,7 @@ export namespace Task {
    * ```
    */
   export interface CopyAsset {
+    DestFileName?: string;
     DestFilePath: string;
     DestComp: string;
     SourceComp: string;

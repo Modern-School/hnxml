@@ -58,3 +58,4 @@ export type {
 } from "./src/standard/computer/index.ts";
 export type { AllDaemons, Daemon } from "./src/standard/computer/daemon.ts";
 export type { HacknetExtension } from "./src/standard/info/index.ts";
+export const empty = " ";

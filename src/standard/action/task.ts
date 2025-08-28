@@ -91,6 +91,7 @@ export namespace Task {
     MissionFilepath: string;
     TargetComp: string;
     AssignmentTag?: string;
+    StartsComplete?: boolean;
     children?: never;
   }
 

@@ -1,5 +1,4 @@
-import { AllTriggers } from "./trigger.ts";
-import { Trigger } from "./trigger.ts";
+import { AllTriggers, Trigger } from "./trigger.ts";
 
 /**
  * Action 可以根据特定条件来修改、控制游戏内容。检测条件的东西叫做 Trigger (触发器)。

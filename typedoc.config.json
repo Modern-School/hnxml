@@ -51,7 +51,7 @@
     "@inlineType",
     "@preventExpand",
     "@expandType",
-    "@localeCN"
+    "@localeEnglish"
   ],
   "highlightLanguages": [
     "xml",

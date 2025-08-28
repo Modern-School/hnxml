@@ -1,11 +1,11 @@
-import type { HXConditionalActions } from "../standard/action/index.ts";
+import type { ConditionalActionsElement } from "../standard/action/index.ts";
 import { Trigger } from "../standard/action/trigger.ts";
 
 /**
  * Action's IntrinsicElements
  */
 export interface TriggerElements {
-  ConditionalActions: HXConditionalActions;
+  ConditionalActions: ConditionalActionsElement;
   OnConnect: Trigger.OnConnect;
   HasFlays: Trigger.HasFlags;
   OnAdminGained: Trigger.OnAdminGained;

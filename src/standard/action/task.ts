@@ -1,18 +1,24 @@
+import type { AllTriggers, Trigger } from "./trigger.ts";
+
 /**
- * This module contains all Action task. The usage and examples are from <https://github.com/AutumnRivers/hacknet-vscode>, with some minor adjustments made on my part. Thank you AutumnRivers!
+ * This module contains all Action task.
+ *
+ * Some usage and examples are from <https://github.com/AutumnRivers/hacknet-vscode>,
+ * with some minor adjustments made on my part.
+ * Thank you AutumnRivers!
  * @module
  */
 
 /**
- * the Task. Child Elements of Trigger are all types of Task.
+ * 这些是 Task。Trigger 的子元素是所有种类的 Task 。
  *
- * @localeCN 这些是 Task。Trigger 的子元素是所有种类的 Task 。
+ * @localeEnglish The Task. Child Elements of Trigger are all types of Task.
  * @see {@link Trigger}, {@link AllTriggers}
  */
 export namespace Task {
   /**
-   * Run a function
-   * @localeCN 运行 function
+   * 运行 function
+   * @localeEnglish Run a function
    * @example
    * ```xml
    * <RunFunction FunctionName="changeSong" FunctionValue="2" DelayHost="delayNode" Delay="1.0"/>
@@ -27,9 +33,8 @@ export namespace Task {
   }
 
   /**
-   * Load a mission and send its email.
-   *
-   * @localeCN 加载一个任务并且发送任务的邮件。（任务和邮件是绑定关系的）
+   * 加载一个任务并且发送任务的邮件。（任务和邮件是绑定关系的）
+   * @localeEnglish Load a mission and send its email.
    * @example
    * ``xml
    * <LoadMission MissionName="Missions/SurpriseMission.xml"/>
@@ -41,8 +46,8 @@ export namespace Task {
   }
 
   /**
-   * Remotely add an asset to the target node.
-   * @localeCN 添加文件
+   * 添加文件
+   * @localeEnglish Remotely add an asset to the target node.
    * @example
    * ```xml
    * <AddAsset FileName="test" FileContents="test" TargetComp="playerComp" TargetFolderpath="home"/>
@@ -57,8 +62,8 @@ export namespace Task {
   }
 
   /**
-   * Copy a file from a remote node.
-   * @localeCN 复制文件
+   * 复制文件
+   * @localeEnglish Copy a file from a remote node.
    * @example
    * ```xml
    * <CopyAsset DestFilePath="home" DestComp="playerComp" SourceComp="assetNode" SourceFileName="copycat.txt" SourceFilePath="home/copy"/>
@@ -74,11 +79,11 @@ export namespace Task {
   }
 
   /**
-   * Add a mission file to a mission hub.
-   * @localeCN 给任务中心添加任务
+   * 给任务中心添加任务
+   * @localeEnglish Add a mission file to a mission hub.
    * @example
    * ```xml
-   * <AddMissionToHubServer MissionFilepath="Missions/HubMission.xml" TargetComp="missionHub" AssignmentTag="Kaguya"/>
+   * <AddMissionToHubServer MissionFilepath="Missions/HubMission.xml" TargetComp="missionHub" AssignmentTag="Kaguya" StartsComplete="true"/>
    * ```
    */
   export interface AddMissionToHubServer {
@@ -89,8 +94,8 @@ export namespace Task {
   }
 
   /**
-   * Remove a mission file from a mission hub.
-   * @localeCN 从任务中心删除任务
+   * 从任务中心删除任务
+   * @localeEnglish Remove a mission file from a mission hub.
    * @example
    * ```xml
    * <RemoveMissionFromHubServer MissionFilepath="Missions/HubMission.xml" TargetComp="missionHub"/>
@@ -103,8 +108,8 @@ export namespace Task {
   }
 
   /**
-   * Add a thread to an /el Sec-like board.
-   * @localeCN 给一个和原主线剧情的 /el 论坛那样的论坛添加帖子
+   * 给一个和原主线剧情的 /el 论坛那样的论坛添加帖子
+   * @localeEnglish Add a thread to an /el Sec-like board.
    * @example
    * ```xml
    * <AddThreadToMissionBoard ThreadFilepath="Docs/Thread.txt" TargetComp="elSec"/>
@@ -117,12 +122,12 @@ export namespace Task {
   }
 
   /**
-   * Add a generic IRC message.
-   * @localeCN 给 IRC/DHS 添加聊天记录。
+   * 给 IRC/DHS 添加聊天记录。
    *
    * IRC(DHS)聊天记录添加的 Delay 所需缓存内容在IRC(DHS)的 runtime 目录生成，而不是 DelayHost，因此该 Task 可以在不需要 `DelayHost`的情况下被 `Delay`。以下为在IRC(DHS)节点的 `runtime` 目录位置:
    * - IRC: `/IRC/runtime`
    * - IRCHub(DHS): `/HomeBase/runtime`
+   * @localeEnglish Add a generic IRC message.
    * @example
    * ```xml
    * <AddIRCMessage Author="Kaguya" TargetComp="ircNode" Delay="1">HI</AddIRCMessage>
@@ -141,8 +146,8 @@ export namespace Task {
   }
 
   /**
-   * Crash a node
-   * @localeCN 使节点崩溃，相当于给一个节点运行`forkbomb`。
+   * 使节点崩溃，相当于给一个节点运行`forkbomb`。
+   * @localeEnglish Crash a node
    * @example
    * ```xml
    * <CrashComputer TargetComp="playerComp" CrashSource="enemyNode" DelayHost="delayNode" Delay="0"/>
@@ -157,8 +162,8 @@ export namespace Task {
   }
 
   /**
-   * Delete a file.
-   * @localeCN 删除文件。
+   * 删除文件。
+   * @localeEnglish Delete a file.
    * @example
    * ```xml
    * <DeleteFile TargetComp="playerComp" FilePath="home" FileName="deleteme.txt" DelayHost="delayNode" Delay="0"/>
@@ -174,10 +179,10 @@ export namespace Task {
   }
 
   /**
-   * Load in a new action file.
-   * @localeCN 加载一个新的 Action。
+   * 加载一个新的 Action。
    *
    * 注：Action 不可以通过 Task AddConditionalActions 加载自己
+   * @localeEnglish Load in a new action file.
    * @example
    * ```xml
    * <AddConditionalActions Filepath="Actions/NextAction.xml" DelayHost="delayNode" Delay="0"/>
@@ -191,8 +196,8 @@ export namespace Task {
   }
 
   /**
-   * Save the game.
-   * @localeCN 保存游戏
+   * 保存游戏
+   * @localeEnglish Save the game.
    * @example
    * ```xml
    * <SaveGame DelayHost="delayNode" Delay="0"/>
@@ -205,8 +210,8 @@ export namespace Task {
   }
 
   /**
-   * Launch a hacker script.
-   * @localeCN 加载一个 HackerScript
+   * 加载一个 HackerScript
+   * @localeEnglish Launch a hacker script.
    * @example
    * ```xml
    * <LaunchHackScript Filepath="Scripts/HackerScript.txt" DelayHost="delayNode" Delay="0" SourceComp="enemyNode" TargetComp="playerComp" RequireLogsOnSource="false" RequireSourceIntact="true"/>
@@ -223,8 +228,8 @@ export namespace Task {
     children?: never;
   }
   /**
-   * Flicker the player into a new theme.
-   * @localeCN 在闪烁 UI 中更改 theme
+   * 在闪烁 UI 中更改 theme
+   * @localeEnglish Flicker the player into a new theme.
    * @example
    * ```xml
    * <SwitchToTheme ThemePathOrName="Themes/ExampleTheme.xml" FlickerInDuration="3.0" DelayHost="delayNode" Delay="0"/>
@@ -239,11 +244,11 @@ export namespace Task {
   }
 
   /**
-   * Start a screen bleed effect, mostly used in sequencers. Task to stop it is {@link CancelScreenBleedEffect}
-   * @localeCN 开始红屏效果，常用于搭配 Sequencers。关闭它的 Task 是 {@link CancelScreenBleedEffect}
+   * 开始红屏效果，常用于搭配 Sequencers。关闭它的 Task 是 {@link CancelScreenBleedEffect}
+   * @localeEnglish Start a screen bleed effect, mostly used in sequencers. Task to stop it is {@link CancelScreenBleedEffect}
    * @example
    * ```xml
-   * <StartScreenBleedEffect AlertTitle="Sequencer Attack" CompleteAction="Actions/ScreenBleedFailed.xml" TotalDurationSeconds="" DelayHost="delayNode" Delay="0">Break into the Moonshine servers
+   * <StartScreenBleedEffect AlertTitle="Sequencer Attack" CompleteAction="Actions/ScreenBleedFailed.xml" TotalDurationSeconds="0" DelayHost="delayNode" Delay="0">Break into the Moonshine servers
    * Delete all files and backups
    * Get out of there!</StartScreenBleedEffect>
    * ```
@@ -259,7 +264,7 @@ export namespace Task {
 
   /**
    * Stop a screen bleed effect. Task to start it is {@link StartScreenBleedEffect}
-   * @localeCN 停止红屏效果。开始红屏效果的 Task 是 {@link StartScreenBleedEffect}
+   * @localeEnglish 停止红屏效果。开始红屏效果的 Task 是 {@link StartScreenBleedEffect}
    * @example
    * ```xml
    * <CancelScreenBleedEffect DelayHost="delayNode" Delay="0"/>
@@ -273,7 +278,7 @@ export namespace Task {
 
   /**
    * Append text to a file.
-   * @localeCN 给一个文件的末尾添加内容。
+   * @localeEnglish 给一个文件的末尾添加内容。
    * @example
    * ```xml
    * <AppendToFile DelayHost="delayNode" Delay="0" TargetComp="companyWhitelist" TargetFolderpath="Whitelist" TargetFilename="list.txt">#PLAYER_IP#</AppendToFile>
@@ -288,8 +293,8 @@ export namespace Task {
     children: string;
   }
   /**
-   * Kill any currently running exe with the title.
-   * @localeCN 结束当前运行的 exe 进程。
+   * 结束当前运行的 exe 进程。
+   * @localeEnglish Kill any currently running exe with the title.
    * @example
    * ```xml
    * <KillExe DelayHost="delayNode" Delay="0" ExeName="*"/>
@@ -298,7 +303,7 @@ export namespace Task {
   export interface KillExe {
     /**
      * Use `*` to kill all currently running executables.
-     * @localeCN 使用 `*` 来结束所有 exe 进程。
+     * 使用 `*` 来结束所有 exe 进程。
      */
     ExeName: string;
     DelayHost?: string;
@@ -307,8 +312,8 @@ export namespace Task {
   }
 
   /**
-   * Hide a node from the NetMap.
-   * @localeCN 从 `NetMap` 中隐藏 Node
+   * 从 `NetMap` 中隐藏 Node
+   * @localeEnglish Hide a node from the NetMap.
    * @example
    * ```xml
    * <HideNode DelayHost="delayNode" Delay="0" TargetComp="companySecurity"/>
@@ -322,8 +327,8 @@ export namespace Task {
   }
 
   /**
-   * Give the player an existing account so they can automatically login to the specified node.
-   * @localeCN 给玩家一个已经存在的账号使得玩家可以在相关节点上自动登录。
+   * 给玩家一个已经存在的账号使得玩家可以在相关节点上自动登录。
+   * @localeEnglish Give the player an existing account so they can automatically login to the specified node.
    * @example
    * ```xml
    * <GivePlayerUserAccount DelayHost="delayNode" Delay="0" TargetComp="teamHub" Username="#PLAYERNAME#"/>
@@ -337,8 +342,8 @@ export namespace Task {
     children?: never;
   }
   /**
-   * Change the IP of a specified node.
-   * @localeCN 给某个节点更改 IP。
+   * 给某个节点更改 IP。
+   * @localeEnglish Change the IP of a specified node.
    * @example
    * ```xml
    * <ChangeIP  DelayHost="delayNode" Delay="0" TargetComp="finalNode" NewIP="123.123.123.123"/>
@@ -348,7 +353,7 @@ export namespace Task {
     TargetComp: string;
     /**
      * Leave it blank for a random IP.
-     * @localeCN 不声明该属性可以使更改后的 IP 随机。
+     * 不声明该属性可以使更改后的 IP 随机。
      */
     NewIP?: string;
     DelayHost?: string;
@@ -357,8 +362,8 @@ export namespace Task {
   }
 
   /**
-   * Hides all nodes visible on the NetMap.
-   * @localeCN 从 `NetMap` 中隐藏所有 Node
+   * 从 `NetMap` 中隐藏所有 Node
+   * @localeEnglish Hides all nodes visible on the NetMap.
    * @example
    * ```xml
    * <HideAllNodes DelayHost="delayNode" Delay="0"/>
@@ -371,8 +376,8 @@ export namespace Task {
   }
 
   /**
-   * Reveals a node on the NetMap.
-   * @localeCN 使 Node 在 `NetMap` 上出现
+   * 使 Node 在 `NetMap` 上出现
+   * @localeEnglish Reveals a node on the NetMap.
    * @example
    * ```xml
    * <ShowNode DelayHost="delayNode" Delay="0" Target="storageServer"/>
@@ -401,8 +406,8 @@ export namespace Task {
   }
 
   /**
-   * LABYRINTHS DLC ONLY - Change the mail icon to irc, irchub, board, or mail.
-   * @localeCN （需要DLC）更改右上角图标。
+   * （需要DLC）更改右上角图标。
+   * @localeEnglish LABYRINTHS DLC ONLY - Change the mail icon to irc, irchub, board, or mail.
    * @example
    * ```xml
    * <ChangeAlertIcon Target="mainHub" Type="irchub" DelayHost="delayNode" Delay="0"/>
@@ -417,8 +422,8 @@ export namespace Task {
   }
 
   /**
-   * Change the way the netmap is sorted.
-   * @localeCN 改变 `netmap` 的排序方式
+   * 改变 `netmap` 的排序方式
+   * @localeEnglish Change the way the netmap is sorted.
    * @example
    * ```xml
    * <ChangeNetmapSortMethod DelayHost="delayNode" Delay="0" Method="grid"/>
@@ -433,8 +438,8 @@ export namespace Task {
 }
 
 /**
- * all types of Task
- * @localeCN 所有类型的 Task.
+ * 所有类型的 Task.
+ * @localeEnglish all types of Task
  */
 export type AllTasks =
   | Task.RunFunction

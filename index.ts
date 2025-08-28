@@ -1,7 +1,7 @@
 /**
  * Hnxml Standard目前提供以下这几种 Hacknet Extension XML 类型的规范：
  *
- * Actions(行动): {@link HXConditionalActions}
+ * Actions(行动): {@link ConditionalActionsElement}
  *
  * Factions(阵营): {@link HXCustomFaction}
  *
@@ -15,7 +15,7 @@
  *
  * @localeEnglish Hnxml Standard now provides specifications for these types ofHacknet Extension XML:
  *
- * Actions: {@link HXConditionalActions}
+ * Actions: {@link ConditionalActionsElement}
  *
  * Factions: {@link HXCustomFaction}
  *

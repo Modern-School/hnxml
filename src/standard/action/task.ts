@@ -141,7 +141,7 @@ export namespace Task {
    * ```
    */
   export interface AddIRCMessage {
-    Author: string;
+    Author?: string;
     TargetComp: string;
     Delay?: number;
     children: string;

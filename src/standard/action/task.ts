@@ -26,9 +26,9 @@ export namespace Task {
    */
   export interface RunFunction {
     FunctionName: string;
-    FunctionValue: number | string;
+    FunctionValue?: number;
     DelayHost?: string;
-    Delay?: number | string;
+    Delay?: number;
     children?: never;
   }
 

@@ -257,8 +257,8 @@ export namespace Task {
    */
   export interface StartScreenBleedEffect {
     AlertTitle: string;
-    CompleteAction: string;
-    TotalDurationSeconds: string;
+    CompleteAction?: string;
+    TotalDurationSeconds?: number;
     DelayHost?: string;
     Delay?: number;
     children: string;

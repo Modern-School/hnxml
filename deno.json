@@ -13,7 +13,6 @@
     "./function": "./src/function.ts",
     "./portRemap": "./src/portRemap.ts",
     "./hackerScript": "./src/hackerScript.ts",
-    "./fileEncrypter": "./src/fileEncrypter.ts",
     "./jsx": "./jsx.ts"
   },
   "exclude": [

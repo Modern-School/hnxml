@@ -403,8 +403,8 @@ export namespace Task {
    */
   export interface SetLock {
     Module: "terminal" | "ram" | "netmap" | "display";
-    IsLocked: boolean;
-    IsHidden: boolean;
+    IsLocked?: boolean;
+    IsHidden?: boolean;
     DelayHost?: string;
     Delay?: number;
     children?: never;

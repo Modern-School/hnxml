@@ -90,6 +90,9 @@ export namespace Task {
   export interface AddMissionToHubServer {
     MissionFilepath: string;
     TargetComp: string;
+    /**
+     * 分配Tag。如果是给 MissionHub 加，用`top`就会被置顶。给 DHS 加，就会提示分配给了谁。
+     */
     AssignmentTag?: string;
     StartsComplete?: boolean;
     children?: never;
@@ -304,8 +307,8 @@ export namespace Task {
    */
   export interface KillExe {
     /**
-     * Use `*` to kill all currently running executables.
      * 使用 `*` 来结束所有 exe 进程。
+     * @localeEnglish Use `*` to kill all currently running executables.
      */
     ExeName: string;
     DelayHost?: string;
@@ -354,8 +357,8 @@ export namespace Task {
   export interface ChangeIP {
     TargetComp: string;
     /**
-     * Leave it blank for a random IP.
-     * 不声明该属性可以使更改后的 IP 随机。
+     * 不声明该属性，或者没有内容，或者内容以 `#RANDOM` 开头，可以使 IP 随机。
+     * @localeEnglish Leave it blank for a random IP.
      */
     NewIP?: string;
     DelayHost?: string;
@@ -408,8 +411,8 @@ export namespace Task {
   }
 
   /**
-   * （需要DLC）更改右上角图标。
-   * @localeEnglish LABYRINTHS DLC ONLY - Change the mail icon to irc, irchub, board, or mail.
+   * （可能需要DLC）更改右上角图标和所对应的节点。
+   * @localeEnglish maybe LABYRINTHS DLC ONLY - Change the mail icon to irc, irchub, board, or mail and its node.
    * @example
    * ```xml
    * <ChangeAlertIcon Target="mainHub" Type="irchub" DelayHost="delayNode" Delay="0"/>
@@ -417,6 +420,9 @@ export namespace Task {
    */
   export interface ChangeAlertIcon {
     Target: string;
+    /**
+     * icon 类型。如果没有 Labyrinths DLC，就只能填 `mail`。
+     */
     Type: "mail" | "irc" | "irchub" | "board";
     DelayHost?: string;
     Delay?: string;

@@ -1,20 +1,5 @@
 {
-  "name": "@modernschoolproject/hnxml",
-  "version": "0.7.3",
-  "exports": {
-    ".": "./index.ts",
-    "./jsx/mission": "./src/components/mission.ts",
-    "./jsx/action": "./src/components/action.ts",
-    "./jsx/faction": "./src/components/faction.ts",
-    "./jsx/task": "./src/components/task.ts",
-    "./jsx/computer": "./src/components/computer.ts",
-    "./jsx/info": "./src/components/info.ts",
-    "./jsx-runtime": "./jsx-runtime.ts",
-    "./function": "./src/function.ts",
-    "./portRemap": "./src/portRemap.ts",
-    "./hackerScript": "./src/hackerScript.ts",
-    "./jsx": "./jsx.ts"
-  },
+  "workspace": ["./packages/*"],
   "exclude": [
     "./typedoc.config.json",
     "./hnstd.md",
@@ -29,8 +14,8 @@
   "unstable": ["raw-imports"],
   "tasks": {
     "docs": "deno task docs:std && deno task docs:api",
-    "docs:api": "deno run --allow-read --allow-env --allow-run typedoc src/function.ts src/portRemap.ts jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
-    "docs:std": "deno run --allow-read --allow-env --allow-run typedoc index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme hnstd.md --name 'Hnxml Standard'",
+    "docs:api": "deno run --allow-read --allow-env --allow-run typedoc packages/hnxml/src/function.ts packages/hnxml/src/portRemap.ts packages/hnxml/jsx.ts --html ./docs/api --skipErrorChecking --options typedoc.config.json --readme README.md --name hnxml.js",
+    "docs:std": "deno run --allow-read --allow-env --allow-run typedoc packages/hnxml/index.ts --html ./docs/ --skipErrorChecking --options typedoc.config.json --readme hnstd.md --name 'Hnxml Standard'",
     "fmt": "deno fmt",
     "release": "deno task fmt && deno publish --dry-run && deno task changelog && deno task updateDenoJson && deno task fmt",
     "changelog": "pnpx changelogen@latest --bump",
